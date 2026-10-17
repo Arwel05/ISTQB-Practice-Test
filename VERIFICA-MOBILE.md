@@ -24,24 +24,27 @@
 ### Non verificato
 
 - Il prompt nativo di installazione (Android/Chrome): il browser integrato non lo mostra.
-- Safari/iOS e qualsiasi dispositivo fisico.
+- Android su un dispositivo fisico.
 - Lighthouse: va eseguito sul sito pubblicato (vedi sotto).
 
 ## Da fare sui telefoni veri
 
 Servono almeno un iPhone con Safari e un Android con Chrome. Chi esegue la verifica annota dispositivo, versione del sistema e data.
 
+- **iPhone:** iPhone 16 Pro, iOS 26.6.2, Safari. 17 ottobre 2026, sito `arwel05.github.io/ISTQB-Practice-Test`. Esito riferito dal proprietario: funziona. Il passo 5 non è stato provato; l’8 richiede un rilascio successivo all’installazione.
+- **Android:** da fare.
+
 | # | Passo | Atteso | iPhone | Android |
 |---|-------|--------|--------|---------|
-| 1 | Aprire il link pubblico | La Panoramica si carica senza zoom e la barra di navigazione inferiore non copre i contenuti | | |
-| 2 | Impostazioni → "Usa TestPilot sul telefono" | iOS: istruzioni Condividi → Aggiungi a Home. Android: pulsante Installa o istruzioni dal menu | | |
-| 3 | Installare e aprire dall'icona | Si apre a schermo intero con icona verde e nome TestPilot | | |
-| 4 | Attivare la modalità aereo e riaprire l'app | Funziona: allenamento, glossario e capitoli | | |
-| 5 | Sul PC: Esporta backup. Sul telefono: Importa backup | Nome, sessioni e domande affrontate corrispondono | | |
-| 6 | Avviare una simulazione, rispondere a 3 domande, chiudere l'app e riaprirla | Riprende con timer e risposte | | |
-| 7 | Toccare le risposte e il segnalibro | Area di tocco comoda, nessuna doppia selezione | | |
-| 8 | Dopo un nuovo rilascio, riaprire l'app | Compare "È disponibile una nuova versione"; Aggiorna non perde dati | | |
-| 9 | Ruotare in orizzontale | Nessun testo tagliato | | |
+| 1 | Aprire il link pubblico | La Panoramica si carica senza zoom e la barra di navigazione inferiore non copre i contenuti | ok | |
+| 2 | Impostazioni → "Usa TestPilot sul telefono" | iOS: istruzioni Condividi → Aggiungi a Home. Android: pulsante Installa o istruzioni dal menu | ok | |
+| 3 | Installare e aprire dall'icona | Si apre a schermo intero con icona verde e nome TestPilot | ok | |
+| 4 | Attivare la modalità aereo e riaprire l'app | Funziona: allenamento, glossario e capitoli | ok | |
+| 5 | Sul PC: Esporta backup. Sul telefono: Importa backup | Nome, sessioni e domande affrontate corrispondono | non provato | |
+| 6 | Avviare una simulazione, rispondere a 3 domande, chiudere l'app e riaprirla | Riprende con timer e risposte | ok | |
+| 7 | Toccare le risposte e il segnalibro | Area di tocco comoda, nessuna doppia selezione | ok | |
+| 8 | Dopo un nuovo rilascio, riaprire l'app | Compare "È disponibile una nuova versione"; Aggiorna non perde dati | in attesa di un nuovo rilascio | |
+| 9 | Ruotare in orizzontale | Nessun testo tagliato | ok | |
 
 ## Lighthouse sul sito pubblicato
 
