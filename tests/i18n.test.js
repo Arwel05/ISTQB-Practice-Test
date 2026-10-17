@@ -73,8 +73,8 @@ test('no Italian left in English strings, except the deliberate way back to Ital
 });
 
 // Minimal DOM to render every page in both languages and record any key missing from the active dictionary.
-function boot(lang,stored){
- const store=new Map([['testpilot.lang',lang],...(stored?[['testpilot.ctfl.v1',JSON.stringify(stored)]]:[])]);
+function boot(lang,stored,track='foundation'){
+ const store=new Map([['testpilot.track',track],['testpilot.lang',lang],...(stored?[['testpilot.ctfl.v1',JSON.stringify(stored)]]:[])]);
  const handlers={},missing=new Set(),el=()=>({innerHTML:'',textContent:'',classList:{add(){},remove(){},toggle(){}},focus(){},addEventListener(){}});
  const nodes={app:el(),main:el(),toast:el()},skip=el();
  const ctx={localStorage:{getItem:k=>store.get(k)??null,setItem:(k,v)=>store.set(k,String(v))},location:{hash:''},matchMedia:()=>({matches:false}),scrollTo(){},setInterval(){},
@@ -89,7 +89,7 @@ function boot(lang,stored){
 }
 function sampleState(){
  const C=require('../src/core.js'),s=C.fresh(),now=Date.now();s.name='Ada';
- const ids=['q002','q040','ag001','ita005'];
+ const ids=['q002','q040','ita005'];
  s.history=[{id:'h1',mode:'practice',ids,answers:{q002:{choice:3,confidence:'high'},q040:{choice:0,confidence:'low'}},flags:[],index:0,startedAt:now-9e5,deadline:null,finishedAt:now-6e5,score:1}];
  s.active={id:'a1',mode:'practice',ids:['q006','ag002'],answers:{},flags:[],index:1,startedAt:now,deadline:null};
  for(const id of ['q002','q040'])s.stats[id]={seen:1,correct:id==='q002'?1:0,streak:0,lastCorrect:id==='q002',confidence:'medium',lastAt:now,due:now};
@@ -106,7 +106,7 @@ for(const lang of ['it','en'])test(`every page renders in ${lang} without missin
 });
 test('English beta: counter, translated-only practice choices, exam enabled, untranslated questions marked as Italian',()=>{
  const {show}=boot('en',sampleState());
- assert.match(show('home'),/English beta: 80 of 144 questions translated, including all CTFL questions/);
+ assert.match(show('home'),/English beta: 80 of 120 questions translated, including all CTFL questions/);
  const practice=show('practice');assert.doesNotMatch(practice,/value="7"/,'Agile chapters have no English questions yet');assert.match(practice,/value="4">4\. Test techniques/);
  const exam=show('exam');assert.match(exam,/data-action="start-exam"/);assert.doesNotMatch(exam,/available in Italian only/);
  assert.match(show('settings'),/80 of 144 questions translated/);
@@ -125,4 +125,33 @@ test('Italian interface is unchanged by the language layer for questions and exa
 test('reviewer sheet is up to date with the translations',()=>{
  const {sheet}=require('../scripts/review-sheet.js');
  assert.equal(fs.readFileSync(path.join(__dirname,'../REVISIONE-EN.md'),'utf8').replace(/\r\n/g,'\n'),sheet(),'run npm run review:en');
+});
+
+test('Foundation and Agile have disjoint banks, chapters, statistics and mock-exam access',()=>{
+ const s=sampleState();s.active=null;
+ s.stats.ag001={seen:1,correct:1,streak:1,lastCorrect:true,confidence:'high',lastAt:1000,due:2000};
+ const f=boot('it',s),a=boot('it',s,'agile');
+ const F=f.ctx.TrainerTracks.view('foundation'),A=f.ctx.TrainerTracks.view('agile');
+ assert.equal(F.questions.length,120);assert.equal(A.questions.length,24);
+ assert.ok(A.questions.every(q=>!F.questions.some(x=>x.id===q.id)));
+ assert.doesNotMatch(f.show('learn'),/data-id="7"/);
+ assert.doesNotMatch(a.show('learn'),/data-id="1"/);
+ assert.doesNotMatch(a.show('exam'),/data-action="start-exam"/);
+ assert.match(a.show('exam'),/Simulazione Agile non disponibile/);
+ assert.doesNotMatch(a.show('progress'),/data-action="history"/);
+ assert.match(a.show('home'),/1 <span>\/ 24/);
+ assert.match(f.show('home'),/2 <span>\/ 120/);
+ assert.match(a.show('glossary'),/Whole-team approach/);
+ assert.doesNotMatch(a.show('practice'),/value="1"/);
+ const e=boot('en',s,'agile');assert.match(e.show('practice'),/currently in Italian/);
+});
+
+test('legacy mixed sessions are preserved without entering course session totals',()=>{
+ const s=sampleState();s.history[0].ids.push('ag001');
+ const {ctx,show}=boot('it',s);
+ assert.equal(ctx.TrainerTracks.session(s.history[0]),'legacy');
+ assert.match(show('progress'),/Archivio precedente/);
+ assert.match(show('progress'),/0 completate/);
+ assert.match(show('courses'),/CTFL-AT/);
+ assert.match(show('quiz'),/sessione precedente|Sessione precedente/);
 });
