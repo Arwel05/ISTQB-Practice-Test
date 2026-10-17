@@ -1,6 +1,6 @@
 # Revisione della traduzione inglese (beta)
 
-Generato da `npm run review:en`. 80 domande tradotte su 144 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
+Generato da `npm run review:en`. 80 domande tradotte su 147 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
 
 ## Per chi rivede
 
@@ -1307,7 +1307,7 @@ Note:
 | 4 | Analisi e progettazione dei test — Trasforma regole e scenari in casi di test motivati. | Test Analysis and Design — Turn rules and scenarios into well-reasoned test cases. |
 | 5 | Gestione delle attività di test — Usa tempo, evidenze e rischi per prendere decisioni. | Managing the Test Activities — Use time, evidence and risks to make decisions. |
 | 6 | Strumenti di test — Scegli gli strumenti in funzione del problema. | Test Tools — Choose tools according to the problem. |
-| 7 | Agile · Valori e collaborazione — Materiale integrativo Agile Tester: valori, feedback e pianificazione. Non entra nella simulazione CTFL. | Agile · Values and collaboration — Supplementary Agile Tester material: values, feedback and planning. Not part of the CTFL mock exam. |
+| 7 | Agile · Valori e collaborazione — CTFL-AT 2014 · Primo modulo in ampliamento. Obiettivi FA-1.1.1, FA-1.1.2 e FA-1.1.3: valori, responsabilità condivisa e feedback. Gli altri argomenti restano introduttivi. | Agile · Values and collaboration — Supplementary Agile Tester material: values, feedback and planning. Not part of the CTFL mock exam. |
 | 8 | Agile · Qualità durante l’iterazione — Test continui, regressione, feedback tecnico e comunicazione del rischio. | Agile · Quality during the iteration — Continuous testing, regression, technical feedback and communicating risk. |
 | 9 | Agile · Metodi, rischi e strumenti — Distinguere TDD, ATDD e BDD, scegliere tecniche e motivare le priorità. | Agile · Methods, risks and tools — Tell TDD, ATDD and BDD apart, choose techniques and justify priorities. |
 | 10 | Questionario ITA-STQB · Raccolta revisionata — 40 rielaborazioni del questionario fornito. Soluzioni editoriali, non chiave ufficiale. Solo allenamento, fuori dalla simulazione CTFL. | ITA-STQB questionnaire · Reviewed set — 40 adaptations of the supplied questionnaire. Editorial solutions, not an official answer key. Practice only, outside the CTFL mock exam. |
