@@ -25,3 +25,4 @@ Ambito: solo CTFL-AT, syllabus v1.0 (2014), non CTAL-AT 2.0. Dati in `src/agile-
 ## Lotti
 
 1. **Capitolo 1** — mappatura delle 27 domande esistenti e ag028–ag043 (16 domande). Copertura: 8 obiettivi su 8.
+2. **Capitolo 2** — ag044–ag065 (22 domande, incluse 3 keyword: build verification test, configuration item, configuration management). Copertura: 8 obiettivi su 8, keyword incluse.

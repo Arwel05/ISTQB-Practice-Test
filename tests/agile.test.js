@@ -34,7 +34,7 @@ test('old progress is retained and new lessons and answers roundtrip',()=>{
 const A=D.agile,agileQs=()=>D.questions.filter(q=>q.chapter>=7&&q.chapter<=9);
 const loIds=new Set(A.los.map(lo=>lo.id)),kOf=Object.fromEntries(A.los.map(lo=>[lo.id,lo.k]));
 // Chapters whose lot is complete must reach the coverage targets. Updated as each lot lands.
-const DONE=[7];
+const DONE=[7,8];
 test('exam plan matches the official CTFL-AT tables: 40 questions, K1 10, K2 22, K3 8, chapters 13/12/15',()=>{
  const total=A.plan.reduce((n,g)=>n+g.n,0),byK=k=>A.plan.filter(g=>g.k===k).reduce((n,g)=>n+g.n,0);
  assert.equal(total,40);assert.deepEqual([byK(1),byK(2),byK(3)],[10,22,8]);
