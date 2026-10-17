@@ -6,6 +6,10 @@ function shuffle(items,rng=Math.random){const a=[...items];for(let i=a.length-1;
 // Mock-exam quotas for CTFL chapters 1–6.
 const WEIGHTS=[8,6,4,11,9,2];
 function examReady(bank){return WEIGHTS.every((n,i)=>bank.filter(q=>q.chapter===i+1).length>=n);}
+// Exams defined by objective groups: each group draws n questions whose objective is in the group and whose K-level matches.
+function planPool(bank,g){return bank.filter(q=>g.los.includes(q.lo)&&q.k===g.k);}
+function planReady(bank,plan){return plan.every(g=>planPool(bank,g).length>=g.n);}
+function planExam(bank,plan,rng=Math.random){return shuffle(plan.flatMap(g=>{const pool=planPool(bank,g);if(pool.length<g.n)throw Error('Banca insufficiente per '+g.los.join(', '));return shuffle(pool,rng).slice(0,g.n);}),rng);}
 function exam(bank,rng=Math.random){return shuffle(WEIGHTS.flatMap((n,i)=>{const pool=bank.filter(q=>q.chapter===i+1);if(pool.length<n)throw Error('Banca insufficiente per il capitolo '+(i+1));return shuffle(pool,rng).slice(0,n);}),rng);}
 function priority(q,stats,now){const s=stats[q.id];if(!s)return 50;return (s.due<=now?80:0)+(s.lastCorrect?0:50)+(s.confidence==='low'?20:0)+30*(1-s.correct/s.seen)-Math.min(10,s.seen);}
 function adaptive(bank,stats,count=10,chapter=0,now=Date.now(),rng=Math.random){return shuffle(bank.filter(q=>!chapter||q.chapter===chapter),rng).sort((a,b)=>priority(b,stats,now)-priority(a,stats,now)).slice(0,count);}
@@ -44,5 +48,5 @@ function validateState(value,bank){
  };
  state.history=value.history.map(s=>cleanSession(s,true));state.active=value.active?cleanSession(value.active):null;state.examMinutes=value.examMinutes===75?75:60;return state;
 }
-const api={DAY,WEIGHTS,fresh,shuffle,examReady,exam,adaptive,record,due,summarize,expired,complete,validateState};root.TrainerCore=api;if(typeof module!=='undefined')module.exports=api;
+const api={DAY,WEIGHTS,fresh,shuffle,examReady,exam,planReady,planExam,adaptive,record,due,summarize,expired,complete,validateState};root.TrainerCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

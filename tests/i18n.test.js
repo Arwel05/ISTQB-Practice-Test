@@ -136,8 +136,10 @@ test('Foundation and Agile have disjoint banks, chapters, statistics and mock-ex
  assert.ok(A.questions.every(q=>!F.questions.some(x=>x.id===q.id)));
  assert.doesNotMatch(f.show('learn'),/data-id="7"/);
  assert.doesNotMatch(a.show('learn'),/data-id="1"/);
- assert.doesNotMatch(a.show('exam'),/data-action="start-exam"/);
- assert.match(a.show('exam'),/Simulazione Agile non disponibile/);
+ const agileExam=a.show('exam');assert.match(agileExam,/data-action="start-exam"/);
+ assert.match(agileExam,/Simulazione Agile · CTFL-AT 2014/);assert.match(agileExam,/K1 10 · K2 22 · K3 8/);
+ assert.match(agileExam,/<td>13<\/td>.*<td>12<\/td>.*<td>15<\/td>/s,'chapter totals from the official tables');
+ assert.doesNotMatch(boot('en',s,'agile').show('exam'),/data-action="start-exam"/,'Agile questions are Italian only');
  assert.doesNotMatch(a.show('progress'),/data-action="history"/);
  assert.match(a.show('home'),new RegExp('1 <span>/ '+A.questions.length+'<'));
  assert.match(f.show('home'),/2 <span>\/ 120/);

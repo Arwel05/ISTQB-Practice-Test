@@ -34,7 +34,7 @@ test('old progress is retained and new lessons and answers roundtrip',()=>{
 const A=D.agile,agileQs=()=>D.questions.filter(q=>q.chapter>=7&&q.chapter<=9);
 const loIds=new Set(A.los.map(lo=>lo.id)),kOf=Object.fromEntries(A.los.map(lo=>[lo.id,lo.k]));
 // Chapters whose lot is complete must reach the coverage targets. Updated as each lot lands.
-const DONE=[7,8];
+const DONE=[7,8,9];
 test('exam plan matches the official CTFL-AT tables: 40 questions, K1 10, K2 22, K3 8, chapters 13/12/15',()=>{
  const total=A.plan.reduce((n,g)=>n+g.n,0),byK=k=>A.plan.filter(g=>g.k===k).reduce((n,g)=>n+g.n,0);
  assert.equal(total,40);assert.deepEqual([byK(1),byK(2),byK(3)],[10,22,8]);
@@ -69,4 +69,25 @@ test('new Agile questions are original, complete and unambiguous in structure',(
   assert.equal(q.explanation,q.reasons[q.answer],q.id);
  }
  assert.equal(new Set(agileQs().map(q=>q.prompt)).size,agileQs().length,'no duplicated prompts');
+});
+test('100 Agile mock exams follow the official quotas, K-levels and exclusions',()=>{
+ const bank=agileQs();assert.ok(C.planReady(bank,A.plan));
+ for(let n=0;n<100;n++){
+  const exam=C.planExam(bank,A.plan);
+  assert.equal(exam.length,40);assert.equal(new Set(exam.map(q=>q.id)).size,40);
+  for(const g of A.plan)assert.equal(exam.filter(q=>g.los.includes(q.lo)).length,g.n,g.los.join('+'));
+  assert.deepEqual([1,2,3].map(k=>exam.filter(q=>q.k===k).length),[10,22,8]);
+  assert.deepEqual([7,8,9].map(c=>exam.filter(q=>q.chapter===c).length),[13,12,15]);
+  assert.ok(exam.every(q=>q.k===kOf[q.lo]),'only questions at the objective K-level');
+  assert.ok(!exam.some(q=>q.id==='ag008'));
+ }
+ // A saved Agile exam session survives backup validation.
+ const s=C.fresh(),ids=C.planExam(bank,A.plan).map(q=>q.id);
+ s.active={id:'agile-exam',mode:'exam',ids,answers:{[ids[0]]:{choice:1,confidence:'medium'}},flags:[],index:0,startedAt:1000,deadline:1000+60*60000};
+ assert.deepEqual(C.validateState(JSON.parse(JSON.stringify(s)),D.questions),s);
+ assert.throws(()=>C.planExam(bank.filter(q=>q.lo!=='FA-3.3.5'),A.plan),/FA-3.3.5/);
+});
+test('Agile reviewer sheet is up to date',()=>{
+ const fs=require('node:fs'),path=require('node:path'),{sheet}=require('../scripts/review-agile.js');
+ assert.equal(fs.readFileSync(path.join(__dirname,'../REVISIONE-AGILE.md'),'utf8').replace(/\r\n/g,'\n'),sheet(),'run npm run review:agile');
 });

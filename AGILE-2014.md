@@ -26,3 +26,36 @@ Ambito: solo CTFL-AT, syllabus v1.0 (2014), non CTAL-AT 2.0. Dati in `src/agile-
 
 1. **Capitolo 1** — mappatura delle 27 domande esistenti e ag028–ag043 (16 domande). Copertura: 8 obiettivi su 8.
 2. **Capitolo 2** — ag044–ag065 (22 domande, incluse 3 keyword: build verification test, configuration item, configuration management). Copertura: 8 obiettivi su 8, keyword incluse.
+3. **Capitolo 3** — ag066–ag100 (35 domande, di cui 21 K3: rischi, planning poker, definition of done, esempi ATDD, BVA e tabelle decisionali da user story, charter ed euristiche esplorative). Copertura: 13 obiettivi su 13, keyword incluse.
+
+**Totale: 100 domande Agile, 29 gruppi d'esame su 29 coperti.**
+
+## Simulazione Agile (versione 1.6)
+
+- 40 domande estratte con `planExam` (in `src/core.js`) secondo le quote per obiettivo o gruppo, solo fra domande con il livello K dell'obiettivo.
+- 60 minuti (75 con l'estensione), soglia 26/40. Disponibile in italiano: le domande Agile non sono tradotte.
+- La pagina linka il sample ufficiale v1.3 e i sample di ANZTB e ATSQA come prova esterna.
+
+## Verifiche
+
+- `npm test`, 49 test, tra cui:
+  - quote delle tabelle ufficiali;
+  - 100 simulazioni generate: 40 domande, quote per gruppo, K1/K2/K3 = 10/22/8, capitoli 13/12/15, ag008 esclusa;
+  - copertura minima per ogni obiettivo;
+  - validazione del backup con una simulazione Agile in corso;
+  - scheda del revisore aggiornata.
+- `npm run check:agile-sample <pdf>` gira solo in locale, perché il sample non entra nel repo:
+  - confronta numeri e sigle, perché il confronto fra parole non funziona fra italiano e inglese;
+  - sul sample v1.3 segnala una sola coppia, ag093 ↔ #37 (numeri 10 e 11);
+  - confrontata a mano: domande diverse (scegliere una tecnica contro calcolare i valori limite su un altro intervallo).
+  - Le domande nuove sono state scritte dal syllabus, senza leggere il testo delle domande del sample.
+- Browser integrato:
+  - simulazione Agile avviata, con quote verificate sulle 40 domande estratte;
+  - risposte salvate dopo il ricaricamento;
+  - consegna, risultato per capitolo e revisione;
+  - a 375 px nessuno scroll orizzontale; nessun errore in console.
+
+## Da fare
+
+- Revisione delle domande da parte di una persona certificata CTFL-AT: [REVISIONE-AGILE.md](REVISIONE-AGILE.md) (`npm run review:agile`).
+- Prova esterna: i colleghi svolgono il sample ufficiale v1.3 dopo l'allenamento e confrontano il punteggio con quello della simulazione.

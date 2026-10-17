@@ -55,5 +55,5 @@ for(const [n,page,topic,title,prompt,options,reasons] of rows){
  const shift=(n-1)%4,rotate=a=>a.slice(shift).concat(a.slice(0,shift));
  D.questions.push({id:'ita'+String(n).padStart(3,'0'),chapter:10,topicChapter:topic,lo:'ITA-STQB v5 · Q'+n,k:[4,14,19,35,36,39].includes(n)?3:2,prompt,options:rotate(options),answer:(4-shift)%4,explanation:reasons[0],reasons:rotate(reasons),source:'ITASTQB-QTEST-FL.pdf · versione 5 · pagina '+page+' · domanda '+n+' · rielaborazione e soluzione editoriale (chiave ufficiale non presente)',sourceNote:'Raccolta integrativa: non presentata come sample aggiornato CTFL 4.0.1.',syllabusUrl:D.syllabusUrl});
 }
-D.version='1.5.0';
+D.version='1.6.0';
 })(globalThis);

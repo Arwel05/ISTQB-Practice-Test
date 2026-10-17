@@ -54,6 +54,9 @@ scripts/icons.js   Icone PNG generate senza dipendenze
 scripts/serve.js   Anteprima locale (desktop o web)
 tests/core.test.js Test delle regole che influenzano risultati e dati
 tests/web.test.js  Test del build web e del livello PWA
+src/agile-2014.js  CTFL-AT 2014: obiettivi, quote d'esame ufficiali, mappatura e domande originali per lotto
+scripts/review-agile.js  Genera REVISIONE-AGILE.md (npm run review:agile)
+scripts/check-agile-sample.js  Controllo locale di somiglianza col sample ufficiale (npm run check:agile-sample <pdf>)
 tests/i18n.test.js Test di dizionari, traduzioni, terminologia e rendering nelle due lingue
 scripts/review-sheet.js  Genera REVISIONE-EN.md per il revisore (npm run review:en)
 ```
