@@ -32,7 +32,13 @@
 Servono almeno un iPhone con Safari e un Android con Chrome. Chi esegue la verifica annota dispositivo, versione del sistema e data.
 
 - **iPhone:** iPhone 16 Pro, iOS 26.6.2, Safari. 17 ottobre 2026, sito `arwel05.github.io/ISTQB-Practice-Test`. Esito riferito dal proprietario: funziona. Il passo 5 non è stato provato; l’8 richiede un rilascio successivo all’installazione.
-- **Android:** da fare.
+- **Android:** collaudo affidato ai colleghi su dispositivi reali; non ancora verificato. Non è un requisito completato né un esito positivo presunto.
+
+### Consegna per il collaudo Android
+
+Usare la checklist qui sotto in Chrome, annotando modello, versione Android, versione Chrome e versione TestPilot. Provare almeno installazione, riapertura in modalità aereo, ripresa della simulazione e trasferimento del backup. Il controllo degli aggiornamenti richiede una versione successiva.
+
+Per ogni anomalia segnalare: titolo breve, dispositivo/versioni, passi per riprodurla, risultato atteso, risultato ottenuto, frequenza e screenshot (senza dati personali). Indicare il codice della domanda per problemi didattici. Non allegare nel gruppo il backup completo: contiene nome e risposte. Distinguere problema funzionale, dubbio sul contenuto e proposta di miglioramento. Segnare ogni caso come superato, fallito, bloccato o non eseguito: l’assenza di segnalazioni non equivale a un test superato.
 
 | # | Passo | Atteso | iPhone | Android |
 |---|-------|--------|--------|---------|
