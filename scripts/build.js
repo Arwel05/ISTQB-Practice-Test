@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 // Load order matters: data, English overlay, logic, dictionaries, i18n, then the UI.
-const SCRIPTS=['content.js','agile.js','itastqb.js','content-en.js','core.js','locale-it.js','locale-en.js','i18n.js','tracks.js','app.js'];
+const SCRIPTS=['content.js','agile.js','agile-2014.js','itastqb.js','content-en.js','core.js','locale-it.js','locale-en.js','i18n.js','tracks.js','app.js'];
 const read=name=>fs.readFileSync(path.join(root,'src',name),'utf8');
 // Inline CSS and scripts into one self-contained HTML. `extraScripts` load just before app.js; `head` is appended to <head>.
 function bundle({extraScripts=[],head=''}={}){

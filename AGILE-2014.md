@@ -1,16 +1,27 @@
-# CTFL-AT 2014 — incremento 1
+# CTFL-AT 2014 · Stato del percorso Agile
 
-Ambito: solo CTFL-AT 2014, non CTAL-AT 2.0. Il percorso rimane incompleto.
+Ambito: solo CTFL-AT, syllabus v1.0 (2014), non CTAL-AT 2.0. Dati in `src/agile-2014.js`.
 
-Il primo incremento aggiunge un laboratorio originale con soluzione nel capitolo 1 e tre quesiti originali, ag025–ag027, collegati rispettivamente a FA-1.1.1 (K1), FA-1.1.2 (K2), FA-1.1.3 (K2). Ogni alternativa ha una motivazione. Non sono domande ufficiali né una prova della completa padronanza degli obiettivi.
+## Riferimenti ufficiali (scaricati e letti il 17 ottobre 2026, non inclusi nel repo)
 
-Totale attuale: 27 domande Agile; nessuna modifica agli ID preesistenti, a Foundation o ai progressi salvati. La simulazione Agile resta disabilitata. I riferimenti moderni già presenti sono approfondimenti, non sostituti del syllabus 2014.
+- Syllabus CTFL-AT v1.0: 26 obiettivi FA-x.y.z con livello K.
+- Exam Structures & Rules Tables v1.19 (19 agosto 2026):
+  - 40 domande da 1 punto, soglia 26;
+  - per livello K: 10 domande K1, 22 K2 e 8 K3;
+  - per capitolo: 13, 12 e 15 domande;
+  - quote per obiettivo o gruppo di obiettivi.
+- Durata: 60 minuti secondo la pagina CTFL-AT delle tabelle e il sito ISTQB. La tabella riassuntiva delle stesse v1.19 indica invece 90 minuti: discrepanza segnalata, qui si usa 60 (75 con l'estensione).
+- Sample exam v1.3: secondo la licenza è ammesso solo l'uso di estratti non commerciali con citazione, o in articoli e libri; ogni altro uso richiede l'autorizzazione scritta di ISTQB. **Non è incluso nell'app**: va usato come prova esterna.
+- Dismissione del CTFL-AT: esami fino al 6 maggio 2027 in inglese e fino al 6 novembre 2027 nelle altre lingue.
 
-Prossimi incrementi: copertura dettagliata di FA-1.2 (approcci, storie verificabili, retrospettive, CI, pianificazione); successivamente capitoli 2 e 3; infine banca bilanciata, revisione umana e simulazione conforme alle regole ufficiali.
+## Regole della banca
 
-Fonti verificate il 17 ottobre 2026:
-- https://istqb.org/certifications/certified-tester-foundation-level-agile-tester-ctfl-at/
-- https://istqb.org/wp-content/uploads/2024/11/ISTQB-CTFL-AT_Syllabus_v1.0.pdf (obiettivi del capitolo 1, pagina 8)
-- https://istqb.org/istqb-launches-advanced-level-agile-tester-certification-reflecting-industry-maturity/ (scadenze: inglese 6 maggio 2027; altre lingue 6 novembre 2027)
+- Ogni domanda ha un obiettivo FA-x.y.z. Le keyword K1 dei capitoli 2 e 3 sono FA-2-KW e FA-3-KW.
+- In simulazione entra una domanda solo se il suo livello K è uguale a quello dell'obiettivo. Le domande K2 su obiettivi K3 restano come preparazione.
+- Copertura minima per obiettivo: 4 domande se forma da solo un gruppo da 2 o più domande d'esame, altrimenti 3.
+- ag008 (Scrum Guide 2020) è un approfondimento ed è esclusa dalla simulazione.
+- Gli ID esistenti non cambiano. ag005 passa al capitolo 3 (FA-3.3.2), perché valuta i criteri di accettazione.
 
-Materiale originale, non accreditato. Nessuna garanzia di superamento dell'esame. Non sono stati riprodotti corsi commerciali o questionari ufficiali.
+## Lotti
+
+1. **Capitolo 1** — mappatura delle 27 domande esistenti e ag028–ag043 (16 domande). Copertura: 8 obiettivi su 8.
