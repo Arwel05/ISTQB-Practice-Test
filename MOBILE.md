@@ -1,15 +1,41 @@
-# TestPilot sul cellulare
+# TestPilot sul telefono
 
-La distribuzione web è in `sites/testpilot-mobile`, separata dallo ZIP desktop. Include soltanto l’HTML autosufficiente e la configurazione del sito, non i PDF, i backup o i progressi.
+Dalla versione 1.3 TestPilot si può pubblicare come app web installabile (PWA) su GitHub Pages. Il link è unico e pubblico: chiunque lo conosca può aprirlo, senza account. Dopo la prima apertura l'app funziona anche offline.
 
-Sito: https://testpilot-istqb-trainer.arwel05.chatgpt.site
+## Come funziona
 
-Accesso privato del proprietario: usare lo stesso account sul telefono. Non è un link pubblico condivisibile con chiunque. La pubblicazione non modifica automaticamente il pubblico del sito.
+- `npm run build:web` genera `sites/web/`: l'HTML autosufficiente, `manifest.webmanifest`, le icone PNG e `sw.js`. La cartella è generata e non va versionata.
+- Il service worker mette in cache tutti i file. Il nome della cache deriva dall'hash del contenuto, quindi ogni modifica produce una nuova versione.
+- Una nuova versione non si attiva da sola: compare la barra "È disponibile una nuova versione". Non compare mai durante una simulazione cronometrata. Toccando **Aggiorna** la pagina si ricarica e una simulazione in corso riprende con lo stesso timer.
+- Lo ZIP desktop (`dist/TestPilot.html`) non contiene né il service worker né il manifest e resta invariato.
 
-I progressi restano nel browser del dispositivo e non sono sincronizzati. Per trasferirli dal computer: Impostazioni → Esporta backup; sul telefono: Impostazioni → Importa backup. L’importazione sostituisce i dati attuali dopo conferma.
+## Progressi e backup
 
-Questa versione richiede una connessione per aprire la pagina. Non è una PWA con disponibilità offline garantita. L’HTML contiene tutte le risorse didattiche; i collegamenti alle fonti richiedono internet. Le funzionalità non sono state provate su un dispositivo fisico iOS/Android.
+- I progressi restano nel browser di ciascun dispositivo e non sono sincronizzati.
+- Per trasferirli dal computer: Impostazioni → Esporta backup; sul telefono: Impostazioni → Importa backup.
+- L'app chiede al browser lo spazio di archiviazione persistente. Se l'ultimo backup ha più di 14 giorni, la Panoramica ricorda di esportarne uno nuovo.
+- **iPhone/iPad:** Safari può cancellare i dati di un sito non visitato per circa 7 giorni. L'eccezione sono le app aggiunte alla schermata Home. Per questo l'app mostra le istruzioni di installazione (Condividi → Aggiungi alla schermata Home).
 
-Per rigenerare dopo una modifica: `npm run build`, poi `node scripts/build-mobile.js`. Pubblicare dal checkout `sites/testpilot-mobile` usando il project_id già salvato in `.openai/hosting.json`; non creare un nuovo sito.
+## Pubblicazione
 
-Adattamenti: campi a 16 px su mobile, spazio per l’area sicura inferiore, pulsanti di risposta di almeno 48 px e gestione delle stringhe lunghe nelle spiegazioni. Rimangono disponibili tutte le 144 domande.
+Il workflow `.github/workflows/pages.yml` parte a ogni push su `main`: esegue `npm test`, che genera anche `sites/web/`, e pubblica la cartella solo se tutti i test sono verdi.
+
+Prima configurazione su GitHub:
+
+1. creare un repository pubblico e fare push del branch `main`;
+2. in Settings → Pages scegliere **Source: GitHub Actions**.
+
+L'indirizzo sarà `https://<utente>.github.io/<repository>/`. Tutti i percorsi sono relativi, quindi la sottocartella funziona senza configurazioni.
+
+## Anteprima locale
+
+```text
+npm run build:web
+npm run start:web
+```
+
+Apre `http://127.0.0.1:4174`, accessibile solo da questo computer. Il service worker funziona anche su localhost.
+
+La versione precedente, pubblicata su un sito privato (`sites/testpilot-mobile`), è esclusa dal repository e non viene più aggiornata.
+
+La checklist di verifica su dispositivi reali è in [VERIFICA-MOBILE.md](VERIFICA-MOBILE.md).

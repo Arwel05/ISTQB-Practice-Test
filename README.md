@@ -6,7 +6,7 @@ Applicazione locale in italiano per esercitarsi su ISTQB CTFL Foundation Level, 
 
 Distribuisci `TestPilot-v1.2.zip`. Dopo l'estrazione, apri `TestPilot.html` nel browser. Le istruzioni sono in `LEGGIMI.txt`. I progressi non sono incorporati nel file: ogni browser conserva il proprio profilo. Esegui regolarmente un backup dalle impostazioni.
 
-La consegna è destinata ai browser desktop. La GUI è responsive, ma per l'uso comodo su iOS è preferibile ospitare il file tramite HTTPS. Non è stata effettuata alcuna pubblicazione online.
+Lo ZIP è destinato ai browser desktop. Per telefoni e tablet c'è la versione web installabile e offline (PWA), pubblicata su GitHub Pages: vedi [MOBILE.md](MOBILE.md) e la verifica in [VERIFICA-MOBILE.md](VERIFICA-MOBILE.md).
 
 ## Funzionalità
 
@@ -26,9 +26,11 @@ La consegna è destinata ai browser desktop. La GUI è responsive, ma per l'uso 
 npm test
 npm run build
 npm start
+npm run build:web
+npm run start:web
 ```
 
-L'anteprima è su `http://127.0.0.1:4173`. Il server è vincolato al loopback e non espone i file del progetto. Il build genera `dist/TestPilot.html` e copia le istruzioni.
+`npm test` rigenera entrambi i build prima dei test. L'anteprima desktop è su `http://127.0.0.1:4173`, quella web su `http://127.0.0.1:4174`. I server sono vincolati al loopback e non espongono i file del progetto. Il build genera `dist/TestPilot.html` e copia le istruzioni; `build:web` genera `sites/web/`, cartella non versionata.
 
 Struttura:
 
@@ -38,9 +40,14 @@ src/core.js        Selezione, ripasso, punteggi, timer e validazione backup
 src/app.js         Interfaccia, navigazione e persistenza
 src/style.css      Tema responsive e accessibilità
 src/index.html     Documento sorgente
+src/pwa.js         Livello web: service worker, installazione, promemoria backup (solo build web)
+src/sw.js          Modello del service worker
 scripts/build.js   Bundle HTML senza dipendenze esterne
-scripts/serve.js   Anteprima locale
+scripts/build-web.js  Build PWA per GitHub Pages (manifest, icone, cache versionata)
+scripts/icons.js   Icone PNG generate senza dipendenze
+scripts/serve.js   Anteprima locale (desktop o web)
 tests/core.test.js Test delle regole che influenzano risultati e dati
+tests/web.test.js  Test del build web e del livello PWA
 ```
 
 ## Limiti didattici

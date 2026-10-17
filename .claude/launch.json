@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "testpilot-web", "runtimeExecutable": "node", "runtimeArgs": ["scripts/serve.js", "web"], "port": 4174 }
+  ]
+}

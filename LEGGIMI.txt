@@ -58,12 +58,14 @@ ISTQB e CTFL sono marchi dei rispettivi titolari. Il materiale ufficiale
 non è incorporato nello ZIP: i collegamenti alle fonti richiedono internet.
 
 DISPOSITIVI
-La GUI si adatta anche a schermi piccoli. L'apertura diretta di HTML scaricati
-su telefoni, in particolare iOS, dipende dal browser e dal gestore file.
-La distribuzione pronta qui è per browser desktop; su telefoni conviene
-servire lo stesso file tramite un hosting statico HTTPS (non incluso).
+Questo ZIP è pensato per i browser desktop. Sul telefono usa la versione web
+(link pubblicato su GitHub Pages): si installa nella schermata Home e
+funziona offline. I progressi non si sincronizzano tra dispositivi: usa
+Esporta/Importa backup. Su iPhone installa l'app dalla schermata Home,
+altrimenti Safari può cancellare i dati dopo circa 7 giorni senza visite.
 
 SVILUPPO
 I sorgenti sono nella cartella src. Non ci sono dipendenze npm.
 Con Node installato: npm test; npm run build; npm start.
-Il server di anteprima usa solo 127.0.0.1:4173.
+Versione web: npm run build:web; npm run start:web (127.0.0.1:4174).
+I server di anteprima ascoltano solo su 127.0.0.1.
