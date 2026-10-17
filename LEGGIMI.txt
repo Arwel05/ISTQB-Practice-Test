@@ -14,6 +14,11 @@ COSA INCLUDE
 - Simulazione da 40 domande, 60 o 75 minuti, soglia 26/40.
 - Risultati, preferiti, salvataggio locale e backup JSON importabile/esportabile.
 
+LINGUA
+In Impostazioni (o con il pulsante EN/IT in alto) puoi passare all'inglese,
+in beta: interfaccia completa, 10 domande tradotte su 144, simulazione solo
+in italiano. Progressi e backup restano validi in entrambe le lingue.
+
 DATI E BACKUP
 Il browser conserva i progressi localmente. Non vengono inviati a un server.
 Le impostazioni del browser possono impedire il salvataggio dei file locali.

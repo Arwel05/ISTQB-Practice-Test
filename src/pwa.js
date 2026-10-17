@@ -9,8 +9,10 @@ let prompt=null,waiting=null,busy=false,requested=false,bar=null;
 const listeners=[],changed=()=>listeners.forEach(fn=>fn());
 function lastExport(){try{return Number(localStorage.getItem(LAST_EXPORT))||0;}catch(e){return 0;}}
 function showBar(){
- if(!bar){bar=document.createElement('div');bar.className='update-bar';bar.setAttribute('role','status');bar.hidden=true;bar.innerHTML='<span>È disponibile una nuova versione di TestPilot.</span><button class="btn secondary" type="button">Aggiorna</button>';
+ if(!bar){bar=document.createElement('div');bar.className='update-bar';bar.setAttribute('role','status');bar.hidden=true;bar.innerHTML='<span></span><button class="btn secondary" type="button"></button>';
   bar.querySelector('button').onclick=()=>{if(!waiting)return;requested=true;bar.hidden=true;waiting.postMessage('skip-waiting');};document.body.append(bar);}
+ const t=root.TestPilotI18n?root.TestPilotI18n.t:k=>({'update.available':'È disponibile una nuova versione di TestPilot.','update.button':'Aggiorna'})[k];
+ bar.querySelector('span').textContent=t('update.available');bar.querySelector('button').textContent=t('update.button');
  // Never offer a reload in the middle of a timed simulation.
  bar.hidden=!waiting||busy;
 }

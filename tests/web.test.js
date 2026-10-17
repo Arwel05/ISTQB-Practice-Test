@@ -40,7 +40,7 @@ test('PWA layer is in the hosted page only, never in the desktop ZIP',()=>{
  const desktop=fs.readFileSync(path.join(__dirname,'../dist/TestPilot.html'),'utf8'),hosted=files['index.html'];
  assert.ok(!desktop.includes('serviceWorker')&&!desktop.includes('manifest.webmanifest'),'desktop ZIP has no service worker or manifest');
  const scripts=[...hosted.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
- assert.equal(scripts.length,6);assert.match(scripts[4],/TestPilotPWA/);assert.match(scripts[5],/window\.TestPilotPWA/);
+ const {SCRIPTS}=require('../scripts/build.js');assert.equal(scripts.length,SCRIPTS.length+1);assert.match(scripts[SCRIPTS.length-1],/root\.TestPilotPWA=/);assert.match(scripts[SCRIPTS.length],/window\.TestPilotPWA/);
  assert.match(hosted,/<link rel="manifest" href="manifest\.webmanifest">/);assert.match(hosted,/viewport-fit=cover/);
 });
 function loadPwa({protocol='https:',ua='Mozilla/5.0 (Linux; Android 14)',stored=null}={}){

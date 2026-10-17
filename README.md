@@ -1,6 +1,6 @@
 # TestPilot · CTFL Trainer
 
-Applicazione locale in italiano per esercitarsi su ISTQB CTFL Foundation Level, con GUI responsive e dati conservati nel browser. Il file distribuito è autosufficiente: non richiede un server, dipendenze, account o chiamate API.
+Applicazione locale in italiano, con inglese in beta, per esercitarsi su ISTQB CTFL Foundation Level, con GUI responsive e dati conservati nel browser. Il file distribuito è autosufficiente: non richiede un server, dipendenze, account o chiamate API.
 
 ## Uso e condivisione
 
@@ -39,6 +39,11 @@ src/content.js     Capitoli, domande, spiegazioni, glossario e fonti
 src/core.js        Selezione, ripasso, punteggi, timer e validazione backup
 src/app.js         Interfaccia, navigazione e persistenza
 src/style.css      Tema responsive e accessibilità
+src/content-en.js  Inglese (beta) sovrapposto ai contenuti per ID: domande pilota, capitoli, glossario
+src/locale-it.js   Testi dell'interfaccia in italiano (riferimento)
+src/locale-en.js   Testi dell'interfaccia in inglese, stesse chiavi
+src/i18n.js        Scelta della lingua e funzione t()
+src/terms.js       Termini ISTQB IT→EN usati da test e revisione (non incluso nel bundle)
 src/index.html     Documento sorgente
 src/pwa.js         Livello web: service worker, installazione, promemoria backup (solo build web)
 src/sw.js          Modello del service worker
@@ -48,6 +53,8 @@ scripts/icons.js   Icone PNG generate senza dipendenze
 scripts/serve.js   Anteprima locale (desktop o web)
 tests/core.test.js Test delle regole che influenzano risultati e dati
 tests/web.test.js  Test del build web e del livello PWA
+tests/i18n.test.js Test di dizionari, traduzioni, terminologia e rendering nelle due lingue
+scripts/review-sheet.js  Genera REVISIONE-EN.md per il revisore (npm run review:en)
 ```
 
 ## Limiti didattici

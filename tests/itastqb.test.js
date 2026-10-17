@@ -35,9 +35,9 @@ test('distributed HTML includes self-contained data in correct order',()=>{
  const html=fs.readFileSync(require('node:path').join(__dirname,'../dist/TestPilot.html'),'utf8');
  assert.ok(!/<script src=/.test(html));
  const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m[1]);
- assert.equal(scripts.length,5);const context=vm.createContext({});
- for(const script of scripts.slice(0,4))vm.runInContext(script,context);
- assert.equal(context.TrainerData.questions.length,144);assert.equal(context.TrainerData.version,'1.3.0');
+ assert.equal(scripts.length,require('../scripts/build.js').SCRIPTS.length);const context=vm.createContext({});
+ for(const script of scripts.slice(0,3))vm.runInContext(script,context);
+ assert.equal(context.TrainerData.questions.length,144);assert.equal(context.TrainerData.version,'1.4.0');
  // D’Amico is a surname in an existing defect-report example, not audience wording.
  assert.ok(!/\bamici\b|(?<!D[’'])\bamico\b/i.test(html));
 });
