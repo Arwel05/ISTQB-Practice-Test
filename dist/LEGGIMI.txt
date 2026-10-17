@@ -1,0 +1,69 @@
+TESTPILOT — TRAINER CTFL + RACCOLTE INTEGRATIVE 1.2
+
+AVVIO RAPIDO
+1. Estrai tutti i file dello ZIP in una cartella.
+2. Apri TestPilot.html con un browser aggiornato (Chrome, Edge, Firefox o Safari).
+3. Inizia con un allenamento o leggi il Percorso.
+Non servono installazione, account, internet, Python, Node o chiavi API.
+Per distribuire l’applicazione, condividi lo ZIP: i progressi restano separati.
+
+COSA INCLUDE
+- 144 domande: 80 CTFL, 24 Agile e 40 rielaborazioni ITA-STQB v5. Le 64 domande aggiunte hanno fonte e motivazione per ogni alternativa.
+- 6 schede CTFL, 3 approfondimenti Agile e 1 raccolta ITA-STQB, glossario e traccia CTFL di 14 giorni.
+- Allenamento con feedback immediato e ripasso per errori e sicurezza percepita.
+- Simulazione da 40 domande, 60 o 75 minuti, soglia 26/40.
+- Risultati, preferiti, salvataggio locale e backup JSON importabile/esportabile.
+
+DATI E BACKUP
+Il browser conserva i progressi localmente. Non vengono inviati a un server.
+Le impostazioni del browser possono impedire il salvataggio dei file locali.
+Esporta regolarmente il backup da Impostazioni. Spostare/rinominare il file,
+cambiare browser o cancellare i dati di navigazione può separare o perdere i dati.
+Il backup contiene nome e risposte. Lo ZIP distribuito NON contiene i tuoi progressi.
+Non aprire più copie contemporaneamente nello stesso browser.
+Su dispositivi condivisi usa profili browser distinti.
+
+SIMULAZIONI
+Il timer continua anche chiudendo l'app: la scadenza viene salvata.
+Alla riapertura, una simulazione scaduta viene consegnata automaticamente.
+Non cambiare l'orologio del dispositivo durante la prova.
+Le spiegazioni sono visibili solo alla consegna in modalità simulazione.
+La distribuzione per capitolo è 8/6/4/11/9/2. Le quote complete ufficiali
+per obiettivo e livello K non sono replicate. Le domande possono ripetersi.
+La modalità 75 minuti simula l'estensione per lingua non madre: verifica
+l'ammissibilità con il provider per il tuo esame reale.
+
+RACCOLTA ITA-STQB VERSIONE 5
+Il PDF fornito contiene 40 domande, senza soluzioni ufficiali allegate.
+Le 40 rielaborazioni hanno soluzioni editoriali: non sono la chiave ufficiale.
+La versione 5 identifica il questionario, non il syllabus. I quesiti sono
+separati dalla simulazione CTFL 4.0.1; alcuni temi sono approfondimenti.
+
+AMBITO DIDATTICO
+Trainer indipendente, non affiliato né accreditato da ISTQB.
+Le domande sono originali, non ufficiali e non tratte da esami reali.
+Non sostituisce syllabus, corso completo o sample ufficiali.
+Non garantisce il superamento dell'esame. La banca è limitata: alterna
+le simulazioni con sample ufficiali mai visti per evitare memorizzazione.
+La simulazione resta CTFL Foundation. L’integrazione Agile è per allenamento: non è una simulazione completa CTFL-AT. I quesiti Agile sono rielaborazioni selezionate dei PDF forniti, non un’importazione integrale. Le chiavi ambigue o errate sono state corrette e gli argomenti ripetuti accorpati.
+È consigliata una revisione editoriale da un docente CTFL prima di impieghi formali.
+
+FONTI (verificate il 16 ottobre 2026)
+https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/
+https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
+https://istqb.org/wp-content/uploads/2026/05/ISTQB_Exam-Structure-Tables_v1.18.pdf
+https://glossary.istqb.org/
+Il syllabus è © 2024 ISTQB e dei suoi autori, Foundation Level Working Group.
+ISTQB e CTFL sono marchi dei rispettivi titolari. Il materiale ufficiale
+non è incorporato nello ZIP: i collegamenti alle fonti richiedono internet.
+
+DISPOSITIVI
+La GUI si adatta anche a schermi piccoli. L'apertura diretta di HTML scaricati
+su telefoni, in particolare iOS, dipende dal browser e dal gestore file.
+La distribuzione pronta qui è per browser desktop; su telefoni conviene
+servire lo stesso file tramite un hosting statico HTTPS (non incluso).
+
+SVILUPPO
+I sorgenti sono nella cartella src. Non ci sono dipendenze npm.
+Con Node installato: npm test; npm run build; npm start.
+Il server di anteprima usa solo 127.0.0.1:4173.
