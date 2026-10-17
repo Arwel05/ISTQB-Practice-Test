@@ -3,7 +3,10 @@
 const DAY=86400000;
 function fresh(){return {schema:1,name:'',createdAt:Date.now(),stats:{},history:[],lessons:[],days:[],bookmarks:[],active:null,examMinutes:60};}
 function shuffle(items,rng=Math.random){const a=[...items];for(let i=a.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function exam(bank,rng=Math.random){const weights=[8,6,4,11,9,2];return shuffle(weights.flatMap((n,i)=>{const pool=bank.filter(q=>q.chapter===i+1);if(pool.length<n)throw Error('Banca insufficiente per il capitolo '+(i+1));return shuffle(pool,rng).slice(0,n);}),rng);}
+// Mock-exam quotas for CTFL chapters 1–6.
+const WEIGHTS=[8,6,4,11,9,2];
+function examReady(bank){return WEIGHTS.every((n,i)=>bank.filter(q=>q.chapter===i+1).length>=n);}
+function exam(bank,rng=Math.random){return shuffle(WEIGHTS.flatMap((n,i)=>{const pool=bank.filter(q=>q.chapter===i+1);if(pool.length<n)throw Error('Banca insufficiente per il capitolo '+(i+1));return shuffle(pool,rng).slice(0,n);}),rng);}
 function priority(q,stats,now){const s=stats[q.id];if(!s)return 50;return (s.due<=now?80:0)+(s.lastCorrect?0:50)+(s.confidence==='low'?20:0)+30*(1-s.correct/s.seen)-Math.min(10,s.seen);}
 function adaptive(bank,stats,count=10,chapter=0,now=Date.now(),rng=Math.random){return shuffle(bank.filter(q=>!chapter||q.chapter===chapter),rng).sort((a,b)=>priority(b,stats,now)-priority(a,stats,now)).slice(0,count);}
 function record(state,q,answer,confidence='medium',now=Date.now()){
@@ -41,5 +44,5 @@ function validateState(value,bank){
  };
  state.history=value.history.map(s=>cleanSession(s,true));state.active=value.active?cleanSession(value.active):null;state.examMinutes=value.examMinutes===75?75:60;return state;
 }
-const api={DAY,fresh,shuffle,exam,adaptive,record,due,summarize,expired,complete,validateState};root.TrainerCore=api;if(typeof module!=='undefined')module.exports=api;
+const api={DAY,WEIGHTS,fresh,shuffle,examReady,exam,adaptive,record,due,summarize,expired,complete,validateState};root.TrainerCore=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof globalThis!=='undefined'?globalThis:this);

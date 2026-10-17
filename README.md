@@ -15,6 +15,7 @@ Lo ZIP è destinato ai browser desktop. Per telefoni e tablet c'è la versione w
 - Quiz per capitolo, ripasso di errori e domande in scadenza, preferiti.
 - Sicurezza percepita e ripetizione con intervalli crescenti (1 giorno per risposte incerte; 2/4/8/16/30 per risposte sicure consecutive).
 - Simulazioni di 40 domande con quote per capitolo 8/6/4/11/9/2, durata 60 o 75 minuti e soglia 26/40.
+- Inglese in beta: interfaccia completa e tutte le 80 domande CTFL tradotte con la terminologia del syllabus 4.0.1, simulazione compresa. Le domande Agile e ITA-STQB e le schede dei capitoli restano in italiano. Novità in [AGGIORNAMENTO-1.5.md](AGGIORNAMENTO-1.5.md); scheda per il revisore in [REVISIONE-EN.md](REVISIONE-EN.md).
 - Salvataggio di ogni risposta verificata e delle risposte d'esame. Timer assoluto recuperabile dopo ricaricamento o chiusura.
 - Storico, analisi per capitolo, backup JSON con validazione, avvisi in caso di storage non disponibile o conflitto tra schede.
 
@@ -39,7 +40,7 @@ src/content.js     Capitoli, domande, spiegazioni, glossario e fonti
 src/core.js        Selezione, ripasso, punteggi, timer e validazione backup
 src/app.js         Interfaccia, navigazione e persistenza
 src/style.css      Tema responsive e accessibilità
-src/content-en.js  Inglese (beta) sovrapposto ai contenuti per ID: domande pilota, capitoli, glossario
+src/content-en.js  Inglese (beta) sovrapposto ai contenuti per ID: le 80 domande CTFL, capitoli, glossario
 src/locale-it.js   Testi dell'interfaccia in italiano (riferimento)
 src/locale-en.js   Testi dell'interfaccia in inglese, stesse chiavi
 src/i18n.js        Scelta della lingua e funzione t()

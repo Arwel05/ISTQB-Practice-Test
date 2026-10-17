@@ -16,7 +16,8 @@ COSA INCLUDE
 
 LINGUA
 In Impostazioni (o con il pulsante EN/IT in alto) puoi passare all'inglese,
-in beta: interfaccia completa, 10 domande tradotte su 144, simulazione solo
+in beta: interfaccia completa e tutte le 80 domande CTFL tradotte, quindi anche
+la simulazione è disponibile in inglese. Le domande Agile e ITA-STQB restano
 in italiano. Progressi e backup restano validi in entrambe le lingue.
 
 DATI E BACKUP

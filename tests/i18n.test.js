@@ -9,6 +9,14 @@ const locales=load(['locale-it.js','locale-en.js']).TestPilotLocales,IT=locales.
 const placeholders=s=>[...s.matchAll(/\{(\w+)\}/g)].map(m=>m[1]).sort();
 const enText=q=>[q.prompt,...q.options,q.explanation,...(q.reasons||[])].join(' ');
 
+test('editorial fixes preserve q080 answer identity and avoid inflated syllabus claims',()=>{
+ const q=D.questions.find(q=>q.id==='q080');
+ assert.equal(q.answer,1);
+ assert.match(q.options[q.answer],/impegno di manutenzione.*eccessiva fiducia/);
+ assert.match(EN.questions[q.id].options[q.answer],/maintenance effort.*excessive trust/);
+ for(const dict of [IT,ENL])assert.ok(!dict['settings.aboutText'].includes('{lo}'));
+});
+
 test('Italian and English dictionaries have the same keys and placeholders, none empty',()=>{
  assert.deepEqual(Object.keys(ENL).sort(),Object.keys(IT).sort());
  for(const k of Object.keys(IT)){assert.ok(IT[k].trim()&&ENL[k].trim(),k);assert.deepEqual(placeholders(ENL[k]),placeholders(IT[k]),k);}
@@ -21,17 +29,26 @@ test('every key the interface asks for exists, including dynamic ones',()=>{
  for(const k of [...literal,...dynamic])assert.ok(k in IT,'missing key '+k);
 });
 test('English overlay mirrors each Italian question: same IDs, option count, distinct options, answer untouched',()=>{
- const ids=Object.keys(EN.questions);assert.equal(ids.length,10);
+ const ids=Object.keys(EN.questions);assert.equal(ids.length,80);
+ // Exactly the 80 CTFL questions q001–q080; Agile and ITA-STQB stay Italian for now.
+ assert.deepEqual(ids,[...D.questions.filter(q=>/^q0[0-8]\d$/.test(q.id)).map(q=>q.id)]);
  for(const id of ids){const it=D.questions.find(q=>q.id===id),en=EN.questions[id];assert.ok(it,id);
   for(const k of Object.keys(en))assert.ok(['prompt','options','explanation','reasons'].includes(k),id+' overrides '+k);
   assert.equal(en.options.length,it.options.length,id);assert.equal(new Set(en.options).size,en.options.length,id);
   if(it.reasons||en.reasons)assert.equal((en.reasons||[]).length,it.reasons.length,id);
   assert.ok(en.prompt.trim()&&en.explanation.trim(),id);}
- // Pilot spans all six CTFL chapters.
  assert.deepEqual([...new Set(ids.map(id=>D.questions.find(q=>q.id===id).chapter))].sort(),[1,2,3,4,5,6]);
 });
-test('numeric pilot answers keep the same value in both languages',()=>{
- for(const [id,value] of [['q040','9, 10, 20, 21'],['q062','8']]){const q=D.questions.find(x=>x.id===id);assert.match(q.options[q.answer],new RegExp('^'+value));assert.match(EN.questions[id].options[q.answer],new RegExp('^'+value));}
+test('translated bank covers the mock-exam quotas 8/6/4/11/9/2, and the exam draws only translated questions',()=>{
+ const C=require('../src/core.js'),bank=D.questions.filter(q=>EN.questions[q.id]);
+ assert.deepEqual(C.WEIGHTS,[8,6,4,11,9,2]);
+ C.WEIGHTS.forEach((n,i)=>assert.ok(bank.filter(q=>q.chapter===i+1).length>=n,'chapter '+(i+1)));
+ assert.ok(C.examReady(bank));
+ assert.ok(!C.examReady(bank.filter(q=>q.chapter!==6||q.id==='q080')),'one Tools question is not enough');
+ for(let i=0;i<20;i++){const ex=C.exam(bank);assert.equal(ex.length,40);assert.ok(ex.every(q=>EN.questions[q.id]));}
+});
+test('numeric answers keep the same value in both languages',()=>{
+ for(const [id,value] of [['q039','3'],['q040','9, 10, 20, 21'],['q041','11'],['q043','4'],['q045','75%'],['q046','75%'],['q047','.*100%'],['q056','0, 1, 99, 100'],['q057','50%'],['q058','2'],['q062','8'],['q063','T3, T2, T1'],['q075','30'],['q076','1']]){const q=D.questions.find(x=>x.id===id);assert.match(q.options[q.answer],new RegExp('^'+value));assert.match(EN.questions[id].options[q.answer],new RegExp('^'+value));}
  assert.match(EN.questions.q062.prompt,/E = \(a \+ 4\*m \+ b\) \/ 6/,'syllabus notation for three-point estimation');
 });
 test('chapters and glossary are fully covered in English',()=>{
@@ -87,11 +104,12 @@ for(const lang of ['it','en'])test(`every page renders in ${lang} without missin
  assert.equal(seen.size,pages.length,'each route renders its own page');
  assert.deepEqual([...missing],[]);
 });
-test('English beta: counter, translated-only practice choices, exam disabled, untranslated questions marked as Italian',()=>{
+test('English beta: counter, translated-only practice choices, exam enabled, untranslated questions marked as Italian',()=>{
  const {show}=boot('en',sampleState());
- assert.match(show('home'),/English beta: 10 of 144 questions translated/);
+ assert.match(show('home'),/English beta: 80 of 144 questions translated, including all CTFL questions/);
  const practice=show('practice');assert.doesNotMatch(practice,/value="7"/,'Agile chapters have no English questions yet');assert.match(practice,/value="4">4\. Test techniques/);
- const exam=show('exam');assert.doesNotMatch(exam,/data-action="start-exam"/);assert.match(exam,/available in Italian only/);
+ const exam=show('exam');assert.match(exam,/data-action="start-exam"/);assert.doesNotMatch(exam,/available in Italian only/);
+ assert.match(show('settings'),/80 of 144 questions translated/);
  const quiz=show('quiz');assert.match(quiz,/Italian only/);assert.match(quiz,/<h1 class="question-title" tabindex="-1" lang="it">/,'the Agile question is still Italian');
  const result=show('result');assert.match(result,/A test reveals an incorrect total/);assert.match(result,/<span lang="it">/);
  assert.match(show('glossary'),/Absence|Equivalence partition/);
