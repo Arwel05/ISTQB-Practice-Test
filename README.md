@@ -76,7 +76,7 @@ Aggiunti 24 quesiti Agile revisionati e tre capitoli integrativi dai PDF forniti
 
 - [Pagina ufficiale CTFL e sample](https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/).
 - [Syllabus CTFL 4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf).
-- [Exam Structure Tables 1.18](https://istqb.org/wp-content/uploads/2026/05/ISTQB_Exam-Structure-Tables_v1.18.pdf).
+- [Exam Structure Tables 1.19](https://istqb.org/?sdm_process_download=1&download_id=3832).
 - [Glossario ufficiale](https://glossary.istqb.org/).
 
 Consultati il 16 ottobre 2026. Syllabus © 2024 ISTQB e dei suoi autori, Foundation Level Working Group. Marchi dei rispettivi titolari. Il materiale ufficiale non è ridistribuito.

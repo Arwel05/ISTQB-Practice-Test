@@ -172,3 +172,17 @@ test('rotated English overlays line up with the Italian options and rationales',
  }
  assert.ok(numeric>=12,'numeric options checked: '+numeric);
 });
+test('“Report a problem” opens a prefilled GitHub issue with the question only, never profile data',()=>{
+ for(const lang of ['it','en']){
+  const st=sampleState();st.history[0].ids=['q002','q040','q006','q024'];st.history[0].answers={q002:{choice:3,confidence:'high'}};
+  const html=boot(lang,st).show('result');
+  const links=[...html.matchAll(/class="btn ghost sm report-link" href="([^"]+)"/g)].map(m=>m[1].replace(/&amp;/g,'&'));
+  assert.ok(links.length>=4,lang+': one link per reviewed question');
+  const url=new URL(links[0]);
+  assert.equal(url.origin+url.pathname,'https://github.com/Arwel05/ISTQB-Practice-Test/issues/new');
+  assert.match(url.searchParams.get('title'),/^\[q002\]/);
+  const body=url.searchParams.get('body');
+  assert.match(body,/q002 · FL-1\.1\.2 · K2/);assert.match(body,new RegExp((lang==='it'?'Lingua':'Language')+': '+lang));
+  for(const l of links)assert.doesNotMatch(decodeURIComponent(l),/Ada|stats|history|confidence/,'no name, progress or backup in the report');
+ }
+});

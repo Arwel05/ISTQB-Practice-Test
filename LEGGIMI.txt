@@ -58,7 +58,7 @@ La simulazione resta CTFL Foundation. L’integrazione Agile è per allenamento:
 FONTI (verificate il 16 ottobre 2026)
 https://www.istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/
 https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf
-https://istqb.org/wp-content/uploads/2026/05/ISTQB_Exam-Structure-Tables_v1.18.pdf
+https://istqb.org/?sdm_process_download=1&download_id=3832 (Exam Structure Tables v1.19)
 https://glossary.istqb.org/
 Il syllabus è © 2024 ISTQB e dei suoi autori, Foundation Level Working Group.
 ISTQB e CTFL sono marchi dei rispettivi titolari. Il materiale ufficiale
