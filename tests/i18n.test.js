@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const {SCRIPTS}=require('../scripts/build.js'),{terms}=require('../src/terms.js');
 const src=name=>fs.readFileSync(path.join(__dirname,'../src',name),'utf8');
 function load(names,extra={}){const ctx={...extra};vm.createContext(ctx);for(const n of names)vm.runInContext(src(n),ctx);return ctx;}
-const data=load(['content.js','agile.js','agile-2014.js','itastqb.js','content-en.js','content-en-agile.js','content-en-ita.js','content-en-rotate.js','content-en-chapters.js']),D=data.TrainerData,EN=D.en;
+const data=load(['content.js','agile.js','agile-2014.js','itastqb.js','foundation-plan.js','content-en.js','content-en-agile.js','content-en-ita.js','content-en-foundation.js','content-en-rotate.js','content-en-chapters.js']),D=data.TrainerData,EN=D.en;
 const locales=load(['locale-it.js','locale-en.js']).TestPilotLocales,IT=locales.it,ENL=locales.en;
 const placeholders=s=>[...s.matchAll(/\{(\w+)\}/g)].map(m=>m[1]).sort();
 const enText=q=>[q.prompt,...q.options,q.explanation,...(q.reasons||[])].join(' ');
@@ -106,7 +106,8 @@ for(const lang of ['it','en'])test(`every page renders in ${lang} without missin
 });
 test('English beta: full counter, every chapter and question in English, Italian kept only for source citations',()=>{
  const {show}=boot('en',sampleState());
- assert.match(show('home'),/English beta: 120 of 120 questions translated\. The translations have not yet been reviewed/);
+ const fCount=String(120+D.foundation.lots.flat().length);
+ assert.ok(show('home').includes('English beta: '+fCount+' of '+fCount+' questions translated. The translations have not yet been reviewed'));
  const practice=show('practice');assert.match(practice,/value="4">4\. Test techniques/);assert.match(practice,/value="10">10\. ITA-STQB v5/);
  const exam=show('exam');assert.match(exam,/data-action="start-exam"/);
  assert.match(show('settings'),new RegExp(D.questions.length+' of '+D.questions.length+' questions translated'));
@@ -134,7 +135,7 @@ test('Foundation and Agile have disjoint banks, chapters, statistics and mock-ex
  s.stats.ag001={seen:1,correct:1,streak:1,lastCorrect:true,confidence:'high',lastAt:1000,due:2000};
  const f=boot('it',s),a=boot('it',s,'agile');
  const F=f.ctx.TrainerTracks.view('foundation'),A=f.ctx.TrainerTracks.view('agile');
- assert.equal(F.questions.length,120);assert.equal(A.questions.length,27+D.agile.lots.flat().length);
+ assert.equal(F.questions.length,120+D.foundation.lots.flat().length);assert.equal(A.questions.length,27+D.agile.lots.flat().length);
  assert.ok(A.questions.every(q=>!F.questions.some(x=>x.id===q.id)));
  assert.doesNotMatch(f.show('learn'),/data-id="7"/);
  assert.doesNotMatch(a.show('learn'),/data-id="1"/);
@@ -146,7 +147,7 @@ test('Foundation and Agile have disjoint banks, chapters, statistics and mock-ex
  assert.match(agileEn.show('lesson/7'),/Workshop: the wrong booking/);
  assert.doesNotMatch(a.show('progress'),/data-action="history"/);
  assert.match(a.show('home'),new RegExp('1 <span>/ '+A.questions.length+'<'));
- assert.match(f.show('home'),/2 <span>\/ 120/);
+ assert.ok(f.show('home').includes('2 <span>/ '+F.questions.length+'<'));
  assert.match(a.show('glossary'),/Whole-team approach/);
  assert.doesNotMatch(a.show('practice'),/value="1"/);
  const e=boot('en',s,'agile');const ep=e.show('practice');assert.doesNotMatch(ep,/currently in Italian/);assert.match(ep,/value="7">1. Agile: development/);

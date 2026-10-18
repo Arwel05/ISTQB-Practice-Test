@@ -7,7 +7,7 @@ for(const f of ['content.js','foundation-plan.js'])vm.runInContext(fs.readFileSy
 const D=ctx.TrainerData,F=D.foundation,kOf=Object.fromEntries(F.los.map(l=>[l.id,l.k]));
 const bank=()=>D.questions.filter(q=>q.chapter<=6);
 // Chapters whose lot is complete must reach the coverage targets. Updated as each lot lands.
-const DONE=[];
+const DONE=[1];
 
 test('Foundation plan matches the official CTFL v4.0 tables: 40 questions, K1 8 / K2 24 / K3 8, chapters 8/6/4/11/9/2',()=>{
  const sum=gs=>gs.reduce((n,g)=>n+g.n,0);

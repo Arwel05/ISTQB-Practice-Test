@@ -1,6 +1,6 @@
 # Revisione della traduzione inglese (beta)
 
-Generato da `npm run review:en`. 220 domande tradotte su 220 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
+Generato da `npm run review:en`. 246 domande tradotte su 246 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
 
 ## Per chi rivede
 
@@ -142,7 +142,7 @@ Note:
 
 Note:
 
-### q004 · FL-1.2.2 · K2 · Fundamentals of Testing
+### q004 · FL-1.2.2 · K1 · Fundamentals of Testing
 
 | | Italiano | English |
 |---|---|---|
@@ -3392,6 +3392,396 @@ Note:
 | C | Sì: non può riguardare interfacce o flussi più ampi | Yes: it cannot cover interfaces or wider flows |
 | D | Sì: deve sempre precedere la costruzione dei componenti | Yes: it must always come before the components are built |
 | Spiegazione | La struttura può essere codice, architettura o altri elementi pertinenti al livello. La possibilità di applicare la tecnica non significa che sia sempre la scelta più utile o economica. | The structure can be code, architecture or other elements relevant to the level. Being able to apply the technique does not mean it is always the most useful or economical choice. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q081 · FL-1.1.1 · K1 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un obiettivo tipico del testing? | Which is a typical objective of testing? |
+| A | Correggere i difetti trovati nel codice | Fixing the defects found in the code |
+| B | Garantire che il software sia privo di difetti | Guaranteeing that the software is defect-free |
+| C | Sostituire la revisione dei requisiti da parte del cliente | Replacing the customer’s review of the requirements |
+| D ✔ | Verificare se i requisiti specificati sono stati soddisfatti | Verifying whether specified requirements have been fulfilled |
+| Spiegazione | Verificare il soddisfacimento dei requisiti specificati è uno degli obiettivi tipici elencati dal syllabus. | Verifying that specified requirements have been fulfilled is one of the typical objectives listed in the syllabus. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q082 · FL-1.1.1 · K1 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un ente regolatore chiede prove che l’app rispetti una norma sulla privacy. Quale obiettivo del testing risponde a questa esigenza? | A regulator asks for evidence that the app complies with a privacy law. Which test objective meets this need? |
+| A | Eseguire il debugging dei moduli | Debugging the modules |
+| B | Stimare il budget del progetto | Estimating the project budget |
+| C ✔ | Verificare la conformità del test object a requisiti contrattuali, legali e normativi | Verifying that the test object complies with contractual, legal and regulatory requirements |
+| D | Ridurre il numero di righe di codice | Reducing the number of lines of code |
+| Spiegazione | La verifica di conformità a requisiti legali e normativi è un obiettivo esplicito del testing. | Verifying compliance with legal and regulatory requirements is an explicit test objective. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q083 · FL-1.2.2 · K1 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale affermazione descrive la quality assurance (QA)? | Which statement describes quality assurance (QA)? |
+| A | Riguarda solo il processo di sviluppo, non quello di test | It concerns only the development process, not the test process |
+| B ✔ | È un approccio preventivo, orientato al processo, di cui è responsabile chiunque lavori al progetto | It is a preventive, process-oriented approach that is the responsibility of everyone on the project |
+| C | È un approccio correttivo, orientato al prodotto, svolto solo dai tester | It is a corrective, product-oriented approach carried out only by testers |
+| D | È un sinonimo di testing | It is a synonym for testing |
+| Spiegazione | La QA lavora su implementazione e miglioramento dei processi, partendo dall’idea che un buon processo seguito correttamente produca un buon prodotto. | QA focuses on implementing and improving processes, on the basis that a good process followed correctly produces a good product. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q084 · FL-1.2.2 · K1 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Come usano i risultati dei test il testing e la QA? | How do testing and QA use test results? |
+| A ✔ | Il testing li usa per correggere difetti; la QA come feedback su quanto funzionano i processi di sviluppo e di test | Testing uses them to get defects fixed; QA uses them as feedback on how well the development and test processes work |
+| B | Li usa solo la QA | Only QA uses them |
+| C | Il testing li usa per valutare i processi, la QA per correggere difetti | Testing uses them to assess processes, QA to fix defects |
+| D | Nessuno dei due li usa dopo il rilascio | Neither uses them after release |
+| Spiegazione | Gli stessi risultati servono a due scopi: correggere i difetti del prodotto e migliorare i processi. | The same results serve two purposes: fixing product defects and improving processes. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q085 · FL-1.5.2 · K1 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Nel whole team approach, chi può svolgere un’attività? | In the whole team approach, who can perform a task? |
+| A | Solo chi ha il ruolo formale corrispondente | Only the person with the corresponding formal role |
+| B | Solo il tester per i test e solo lo sviluppatore per il codice | Only the tester for tests and only the developer for code |
+| C | Solo il product owner | Only the product owner |
+| D ✔ | Qualsiasi membro del team con le conoscenze e le competenze necessarie | Any team member with the necessary knowledge and skills |
+| Spiegazione | Nel whole team approach chiunque abbia le competenze può svolgere un compito, e tutti sono responsabili della qualità. | In the whole team approach anyone with the skills can do a task, and everyone is responsible for quality. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q086 · FL-1.5.2 · K1 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un vantaggio del whole team approach? | Which is an advantage of the whole team approach? |
+| A | Elimina la necessità dei test di accettazione | It removes the need for acceptance testing |
+| B | Rende inutile condividere lo spazio di lavoro | It makes sharing a workspace unnecessary |
+| C ✔ | Migliora comunicazione e collaborazione e sfrutta le diverse competenze del team | It improves communication and collaboration and leverages the team’s various skills |
+| D | Garantisce sempre il massimo livello di indipendenza del testing | It always guarantees the highest level of independence of testing |
+| Spiegazione | Il syllabus cita dinamiche di team migliori, più comunicazione e collaborazione e sinergia fra le competenze. | The syllabus mentions better team dynamics, more communication and collaboration, and synergy between skill sets. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q087 · FL-1.1.2 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Il test di sistema provoca un crash. Quali attività seguono come parte del debugging? | System testing triggers a crash. Which activities follow as part of debugging? |
+| A | Rivedere i requisiti con il cliente | Reviewing the requirements with the customer |
+| B ✔ | Riprodurre il malfunzionamento, diagnosticare il difetto e correggerlo | Reproducing the failure, diagnosing the defect and fixing it |
+| C | Progettare nuovi casi di test e stimare lo sforzo | Designing new test cases and estimating effort |
+| D | Eseguire il confirmation testing e chiudere il report | Running confirmation testing and closing the report |
+| Spiegazione | Il processo tipico di debugging dopo un malfunzionamento è riproduzione, diagnosi e correzione. | The typical debugging process after a failure is reproduction, diagnosis and fixing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q088 · FL-1.1.2 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Una review del codice individua un difetto. Perché il debugging non richiede riproduzione né diagnosi? | A code review finds a defect. Why does debugging need no reproduction or diagnosis here? |
+| A ✔ | Il testing statico trova direttamente il difetto: non c’è un malfunzionamento da riprodurre | Static testing finds the defect directly: there is no failure to reproduce |
+| B | Perché i difetti trovati in review non vanno corretti | Because defects found in reviews are not fixed |
+| C | Perché il debugging si applica solo ai requisiti | Because debugging applies only to requirements |
+| D | Perché la review sostituisce il confirmation testing | Because the review replaces confirmation testing |
+| Spiegazione | Quando il testing statico identifica un difetto, il debugging consiste solo nel rimuoverlo. | When static testing identifies a defect, debugging consists only of removing it. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q089 · FL-1.2.1 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In che modo il testing rappresenta gli utenti nel progetto? | In what way does testing represent users in the project? |
+| A | I tester sostituiscono gli utenti nel collaudo di accettazione | Testers replace users in acceptance testing |
+| B | Il testing elimina la necessità di parlare con gli utenti | Testing removes the need to talk to users |
+| C | I tester decidono le priorità di business al posto degli utenti | Testers decide business priorities instead of users |
+| D ✔ | I tester fanno sì che la comprensione dei bisogni degli utenti sia considerata in tutto il ciclo di sviluppo | Testers make sure their understanding of users’ needs is considered throughout the development lifecycle |
+| Spiegazione | Coinvolgere un campione rappresentativo di utenti è spesso troppo costoso: i tester ne portano la prospettiva nel progetto. | Involving a representative set of users is often too costly: testers bring their perspective into the project. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q090 · FL-1.2.1 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché il testing contribuisce alla decisione di rilascio? | Why does testing contribute to the release decision? |
+| A | Perché corregge direttamente i difetti trovati | Because it fixes the defects found directly |
+| B | Perché sostituisce la gestione del progetto | Because it replaces project management |
+| C ✔ | Valuta direttamente la qualità del test object e fornisce misure usate nelle decisioni di progetto | It directly evaluates the quality of the test object and provides measures used in project decisions |
+| D | Perché garantisce l’assenza di difetti | Because it guarantees the absence of defects |
+| Spiegazione | Le misure ottenute dal testing entrano nelle decisioni di passaggio da una fase all’altra, compreso il rilascio. | The measures obtained from testing feed decisions on moving to the next phase, including release. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q091 · FL-1.2.3 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un firmware si comporta male perché un campo elettromagnetico ha alterato la memoria. Che cosa mostra il caso? | Firmware misbehaves because an electromagnetic field altered its memory. What does this case show? |
+| A | Il problema è un errore del tester | The problem is an error by the tester |
+| B ✔ | Un malfunzionamento può essere causato da condizioni ambientali, non solo da errori e difetti | A failure can be caused by environmental conditions, not only by errors and defects |
+| C | Ogni malfunzionamento nasce da un errore umano nel codice | Every failure comes from a human error in the code |
+| D | Un difetto produce sempre un malfunzionamento | A defect always produces a failure |
+| Spiegazione | Il syllabus cita proprio radiazioni e campi elettromagnetici come condizioni ambientali che causano malfunzionamenti. | The syllabus mentions exactly radiation and electromagnetic fields as environmental conditions that cause failures. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q092 · FL-1.2.3 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un analista sotto forte pressione dei tempi fraintende una regola, nel codice nasce un difetto e il cliente vede un calcolo errato. Qual è la causa radice più plausibile? | An analyst under heavy time pressure misunderstands a rule, a defect appears in the code and the customer sees a wrong calculation. What is the most plausible root cause? |
+| A ✔ | La pressione dei tempi che ha portato all’errore | The time pressure that led to the error |
+| B | Il calcolo errato visto dal cliente | The wrong calculation seen by the customer |
+| C | Il difetto nel codice | The defect in the code |
+| D | Il defect report del problema | The defect report of the problem |
+| Spiegazione | La causa radice è la ragione fondamentale del problema: intervenire su di essa può prevenire errori simili. | The root cause is the fundamental reason for the problem: addressing it can prevent similar errors. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q093 · FL-1.4.1 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale attività di test risponde alla domanda «come testare?» | Which test activity answers the question “how to test?” |
+| A | L’analisi dei test | Test analysis |
+| B | Il completamento dei test | Test completion |
+| C | Il monitoraggio dei test | Test monitoring |
+| D ✔ | La progettazione dei test | Test design |
+| Spiegazione | La progettazione trasforma le condizioni di test in casi di test e altro testware. | Test design turns test conditions into test cases and other testware. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q094 · FL-1.4.1 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In quale attività i casi di test vengono organizzati in procedure e suite e si verifica che l’ambiente di test sia configurato correttamente? | In which activity are test cases organised into test procedures and suites, and is the test environment checked to be set up correctly? |
+| A | Analisi dei test | Test analysis |
+| B | Esecuzione dei test | Test execution |
+| C ✔ | Implementazione dei test | Test implementation |
+| D | Pianificazione dei test | Test planning |
+| Spiegazione | Nell’implementazione si crea il testware necessario all’esecuzione, si organizzano procedure e suite e si prepara l’ambiente. | Test implementation creates the testware needed for execution, organises procedures and suites and prepares the environment. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q095 · FL-1.4.2 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Il team ha poca esperienza di automazione e non dispone di strumenti adatti. Quale aspetto del test process ne è più influenzato? | The team has little test automation experience and no suitable tools. Which aspect of the test process is most affected? |
+| A | I sette principi del testing | The seven testing principles |
+| B ✔ | Il grado di automazione dei test | The degree of test automation |
+| C | Gli obiettivi di business del cliente | The customer’s business objectives |
+| D | La definizione di difetto | The definition of a defect |
+| Spiegazione | Competenze del team e strumenti disponibili sono fattori di contesto che incidono sul grado di automazione. | Team skills and available tools are contextual factors that affect the degree of test automation. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q096 · FL-1.4.2 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un progetto ha scadenza fissa e budget ridotto. Su quali aspetti del testing incide soprattutto questo vincolo? | A project has a fixed deadline and a small budget. Which aspects of testing does this constraint mainly affect? |
+| A ✔ | Strategia di test, livello di copertura richiesto e dettaglio del testware | Test strategy, required level of coverage and level of detail of the testware |
+| B | La definizione di errore, difetto e malfunzionamento | The definition of error, defect and failure |
+| C | I sette principi del testing | The seven testing principles |
+| D | Nessuno: il testing non dipende dal contesto | None: testing does not depend on context |
+| Spiegazione | I vincoli di progetto influenzano strategia, tecniche, automazione, copertura, dettaglio del testware e reporting. | Project constraints influence strategy, techniques, test automation, coverage, testware detail and reporting. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q097 · FL-1.4.3 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale prodotto di lavoro è tipico della progettazione dei test? | Which work product is typical of test design? |
+| A | Test log | Test logs |
+| B | Test completion report | The test completion report |
+| C | Test plan | The test plan |
+| D ✔ | Casi di test e test charter, con i requisiti di dati e ambiente | Test cases and test charters, with test data and environment requirements |
+| Spiegazione | La progettazione produce casi di test, test charter, coverage item e requisiti di dati e di ambiente. | Test design produces test cases, test charters, coverage items, and test data and environment requirements. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q098 · FL-1.4.3 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Stub, driver e simulatori sono prodotti di quale attività? | Stubs, drivers and simulators are work products of which activity? |
+| A | Completamento dei test | Test completion |
+| B | Monitoraggio e controllo dei test | Test monitoring and test control |
+| C ✔ | Implementazione dei test, come elementi dell’ambiente di test | Test implementation, as test environment items |
+| D | Analisi dei test | Test analysis |
+| Spiegazione | Il syllabus li elenca fra gli elementi dell’ambiente di test creati nell’implementazione. | The syllabus lists them among the test environment items created during test implementation. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q099 · FL-1.4.4 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale valore offre la tracciabilità fra risultati dei test e rischi? | What value does traceability between test results and risks provide? |
+| A | Elimina la necessità del configuration management | It removes the need for configuration management |
+| B ✔ | Permette di valutare il livello di rischio residuo del test object | It allows the level of residual risk in the test object to be evaluated |
+| C | Sostituisce il report di avanzamento | It replaces the test progress report |
+| D | Riduce a zero il numero di test da eseguire | It reduces the number of tests to run to zero |
+| Spiegazione | Il syllabus usa proprio questo esempio: tracciare i risultati sui rischi aiuta a valutare il rischio residuo. | The syllabus uses exactly this example: tracing results to risks helps evaluate residual risk. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q100 · FL-1.4.4 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un auditor chiede quali requisiti sono coperti dai test. Che cosa permette di rispondere? | An auditor asks which requirements are covered by tests. What makes it possible to answer? |
+| A ✔ | La tracciabilità fra casi di test e requisiti | Traceability between test cases and requirements |
+| B | Il numero totale di test eseguiti | The total number of tests run |
+| C | Un test log senza riferimenti ai requisiti | A test log with no references to requirements |
+| D | La durata delle sessioni di test | The length of the test sessions |
+| Spiegazione | Tracciare i casi di test sui requisiti verifica la copertura dei requisiti e facilita gli audit. | Tracing test cases to requirements verifies requirements coverage and facilitates audits. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q101 · FL-1.4.5 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Su quali attività si concentra il ruolo di testing? | Which activities does the testing role mainly focus on? |
+| A | Pianificazione, monitoraggio, controllo e completamento dei test | Test planning, test monitoring, test control and test completion |
+| B | Solo esecuzione dei test | Test execution only |
+| C | Solo gestione dei difetti | Defect management only |
+| D ✔ | Analisi, progettazione, implementazione ed esecuzione dei test | Test analysis, test design, test implementation and test execution |
+| Spiegazione | Il ruolo di testing ha la responsabilità degli aspetti tecnici: analisi, progettazione, implementazione ed esecuzione. | The testing role is responsible for the engineering aspects: analysis, design, implementation and execution. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q102 · FL-1.4.5 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In un team Agile senza test manager, chi svolge i compiti di gestione del test? | In an Agile team with no test manager, who handles the test management tasks? |
+| A | Solo lo Scrum Master | Only the Scrum Master |
+| B | Sempre un test manager dedicato in ogni team | Always a dedicated test manager in every team |
+| C ✔ | In parte il team Agile stesso; i compiti che riguardano più team possono spettare a test manager esterni al team | Partly the Agile team itself; tasks spanning several teams may fall to test managers outside the team |
+| D | Nessuno: in Agile non esistono | Nobody: they do not exist in Agile |
+| Spiegazione | Il syllabus prevede che alcuni compiti di gestione siano svolti dal team e quelli trasversali da test manager fuori dal team. | The syllabus says some test management tasks may be handled by the team, and cross-team tasks by test managers outside it. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q103 · FL-1.5.1 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale competenza aumenta soprattutto l’efficienza del testing, per esempio scegliendo gli strumenti di test adatti? | Which skill mainly increases the efficiency of testing, for example by choosing suitable test tools? |
+| A | La creatività | Creativity |
+| B ✔ | La conoscenza tecnica | Technical knowledge |
+| C | La conoscenza del dominio | Domain knowledge |
+| D | L’ascolto attivo | Active listening |
+| Spiegazione | Il syllabus collega la conoscenza tecnica all’efficienza del testing, ad esempio con strumenti appropriati. | The syllabus links technical knowledge to efficiency, for example by using appropriate test tools. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q104 · FL-1.5.1 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché le capacità di comunicazione sono cruciali per un tester? | Why are communication skills crucial for a tester? |
+| A ✔ | Perché i risultati dei test possono essere percepiti come critiche al prodotto e all’autore, e vanno comunicati in modo costruttivo | Because test results may be perceived as criticism of the product and its author, and must be communicated constructively |
+| B | Perché il tester deve convincere il team che il software è perfetto | Because the tester must convince the team that the software is perfect |
+| C | Perché il tester decide da solo il rilascio | Because the tester decides the release alone |
+| D | Perché i difetti non vanno mai discussi con gli sviluppatori | Because defects must never be discussed with developers |
+| Spiegazione | Chi porta cattive notizie rischia di essere biasimato; anche il confirmation bias rende difficile accettarle. | The bearer of bad news risks being blamed; confirmation bias also makes such news hard to accept. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q105 · FL-1.5.3 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un possibile svantaggio dell’indipendenza del testing? | Which is a possible drawback of independence of testing? |
+| A | Il tester riconosce tipi di difetti diversi | The tester recognises different kinds of defects |
+| B | Il tester può mettere in discussione le assunzioni degli stakeholder | The tester can challenge stakeholders’ assumptions |
+| C | Gli sviluppatori trovano molti difetti nel proprio codice | Developers find many defects in their own code |
+| D ✔ | L’isolamento dal team di sviluppo, con problemi di comunicazione o rapporti conflittuali | Isolation from the development team, leading to communication problems or an adversarial relationship |
+| Spiegazione | Il syllabus cita isolamento, problemi di comunicazione e rapporto conflittuale, oltre al rischio che gli sviluppatori si sentano meno responsabili. | The syllabus mentions isolation, communication problems and an adversarial relationship, and the risk that developers feel less responsible for quality. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q106 · FL-1.5.3 · K2 · Fundamentals of Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un componente viene testato da un collega dello stesso team dell’autore. Quale livello di indipendenza c’è? | A component is tested by a peer from the author’s own team. What level of independence is this? |
+| A | Indipendenza alta | High independence |
+| B | Indipendenza molto alta | Very high independence |
+| C ✔ | Una certa indipendenza | Some independence |
+| D | Nessuna indipendenza | No independence |
+| Spiegazione | I colleghi dello stesso team offrono una certa indipendenza. | Peers from the same team provide some independence. |
 
 - [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
 

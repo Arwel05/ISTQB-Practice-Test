@@ -11,6 +11,7 @@
     "start:web": "node scripts/serve.js web",
     "review:en": "node scripts/review-sheet.js",
     "check:agile-sample": "node scripts/check-agile-sample.js",
-    "review:agile": "node scripts/review-agile.js"
+    "review:agile": "node scripts/review-agile.js",
+    "check:terms": "node scripts/check-terms.js"
   }
 }

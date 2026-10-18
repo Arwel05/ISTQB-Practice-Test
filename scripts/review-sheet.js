@@ -2,7 +2,7 @@
 // Generates REVISIONE-EN.md: Italian and English side by side, for a CTFL-certified reviewer. `npm run review:en` refreshes it.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const root=path.resolve(__dirname,'..'),{terms}=require('../src/terms.js');
-function data(){const ctx={};vm.createContext(ctx);for(const f of ['content.js','agile.js','agile-2014.js','itastqb.js','content-en.js','content-en-agile.js','content-en-ita.js','content-en-rotate.js','content-en-chapters.js'])vm.runInContext(fs.readFileSync(path.join(root,'src',f),'utf8'),ctx);return ctx.TrainerData;}
+function data(){const ctx={};vm.createContext(ctx);for(const f of ['content.js','agile.js','agile-2014.js','itastqb.js','foundation-plan.js','content-en.js','content-en-agile.js','content-en-ita.js','content-en-foundation.js','content-en-rotate.js','content-en-chapters.js'])vm.runInContext(fs.readFileSync(path.join(root,'src',f),'utf8'),ctx);return ctx.TrainerData;}
 // The 10 questions of the 1.4 pilot, marked so the reviewer can start from them.
 const PILOT=['q002','q006','q024','q028','q035','q040','q044','q062','q067','q080'];
 const label=re=>re.source.replace(/\\b/g,'').replace(/\[oi\]|\[ei\]|\[il\]/g,'*').replace(/\|/g,' / ');
