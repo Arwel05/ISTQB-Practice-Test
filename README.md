@@ -40,6 +40,9 @@ src/content.js     Capitoli, domande, spiegazioni, glossario e fonti
 src/core.js        Selezione, ripasso, punteggi, timer e validazione backup
 src/app.js         Interfaccia, navigazione e persistenza
 src/style.css      Tema responsive e accessibilità
+src/content-en-agile.js, src/content-en-ita.js  Inglese per Agile e ITA-STQB, scritto nell'ordine originale (corretta per prima)
+src/content-en-rotate.js  Porta quelle traduzioni nell'ordine mostrato in italiano
+src/content-en-chapters.js  Testi inglesi dei 10 capitoli
 src/content-en.js  Inglese (beta) sovrapposto ai contenuti per ID: le 80 domande CTFL, capitoli, glossario
 src/locale-it.js   Testi dell'interfaccia in italiano (riferimento)
 src/locale-en.js   Testi dell'interfaccia in inglese, stesse chiavi

@@ -279,6 +279,8 @@ lots.push([ // Lot 3 · syllabus chapter 3
 ]);
 const intro={7:'Syllabus CTFL-AT 2014, capitolo 1: Manifesto, whole-team approach, feedback, approcci Agile, user story testabili, retrospettive, CI e pianificazione.',8:'Syllabus CTFL-AT 2014, capitolo 2: testing Agile e tradizionale, stato dei test, regressione, competenze e ruolo del tester.',9:'Syllabus CTFL-AT 2014, capitolo 3: TDD/ATDD/BDD, piramide e quadranti, rischi e stime, tecniche, testing esplorativo e strumenti.'};
 for(const ch of D.chapters)if(intro[ch.id])ch.intro=intro[ch.id];
+const limits=D.chapters.find(ch=>ch.id===7).sections.find(([title])=>title==='Versione di riferimento e limiti');
+if(limits)limits[1]='Preparazione CTFL-AT, syllabus 2014, non Advanced Agile Tester 2.0. Il riferimento alla Scrum Guide 2020 presente negli approfondimenti è un confronto moderno, non un obiettivo aggiuntivo dell’esame 2014. Le domande sono originali e coprono tutti gli obiettivi del syllabus; non sono domande ufficiali ISTQB. Fonti e scadenze sono disponibili nella pagina iniziale del percorso.';
 D.agile={los,plan,lots,syllabus,minutes:60,pass:26};
 let next=28;
 for(const rows of lots)rows.forEach(([lo,prompt,options,reasons])=>{

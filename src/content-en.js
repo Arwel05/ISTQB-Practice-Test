@@ -1,6 +1,6 @@
 /* English overlay (beta), keyed by stable question/chapter IDs. Options follow the order shown in Italian, so saved answer indexes mean the same in both languages.
-   Terminology follows the ISTQB CTFL 4.0.1 syllabus; wording is original. All 80 CTFL questions (q001–q080) are translated, so the mock exam works in English;
-   the 10 pilot questions (see PILOT in scripts/review-sheet.js) and the rest are pending review by a CTFL-certified reviewer. */
+   Terminology follows the ISTQB CTFL 4.0.1 syllabus; wording is original. This file holds the 80 CTFL questions; Agile and ITA-STQB are in
+   content-en-agile.js and content-en-ita.js, chapter bodies in content-en-chapters.js. All pending review by a certified reviewer. */
 (function(root){
 'use strict';
 const D=root.TrainerData;
