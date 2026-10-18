@@ -1,6 +1,6 @@
 # Revisione della traduzione inglese (beta)
 
-Generato da `npm run review:en`. 246 domande tradotte su 246 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
+Generato da `npm run review:en`. 264 domande tradotte su 264 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
 
 ## Per chi rivede
 
@@ -3782,6 +3782,276 @@ Note:
 | C ✔ | Una certa indipendenza | Some independence |
 | D | Nessuna indipendenza | No independence |
 | Spiegazione | I colleghi dello stesso team offrono una certa indipendenza. | Peers from the same team provide some independence. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q107 · FL-2.1.2 · K1 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale buona pratica di testing vale per qualsiasi ciclo di sviluppo? | Which good testing practice applies to any software development lifecycle? |
+| A | I tester rivedono i prodotti di lavoro solo nella versione finale | Testers review work products only in their final version |
+| B ✔ | A ogni attività di sviluppo corrisponde un’attività di test | For every development activity there is a corresponding test activity |
+| C | Il testing inizia solo quando il codice è completo | Testing starts only when the code is complete |
+| D | Tutti i livelli di test hanno gli stessi obiettivi | All test levels have the same objectives |
+| Spiegazione | Così tutte le attività di sviluppo sono soggette a controllo di qualità. | This way every development activity is subject to quality control. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q108 · FL-2.1.2 · K1 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Secondo le buone pratiche indipendenti dal ciclo di vita, quando inizia l’analisi e progettazione dei test di un livello? | According to the good practices that apply to any lifecycle, when do test analysis and test design for a test level start? |
+| A ✔ | Durante la corrispondente fase di sviluppo | During the corresponding development phase |
+| B | Dopo il completamento di tutti i livelli precedenti | After all the previous levels are complete |
+| C | Solo dopo il rilascio | Only after release |
+| D | Quando il cliente approva il contratto | When the customer approves the contract |
+| Spiegazione | Iniziare durante la fase di sviluppo corrispondente applica il principio del testing anticipato. | Starting during the corresponding development phase applies the principle of early testing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q109 · FL-2.1.3 · K1 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale approccio esprime il comportamento atteso con casi di test in linguaggio naturale semplice, di solito nel formato Given/When/Then? | Which approach expresses the desired behaviour with test cases in simple natural language, usually in the Given/When/Then format? |
+| A | Test-Driven Development (TDD) | Test-Driven Development (TDD) |
+| B | Testing esplorativo | Exploratory testing |
+| C | Analisi statica | Static analysis |
+| D ✔ | Behavior-Driven Development (BDD) | Behavior-Driven Development (BDD) |
+| Spiegazione | BDD usa scenari comprensibili agli stakeholder, poi tradotti in test eseguibili. | BDD uses scenarios that stakeholders understand, then translated into executable tests. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q110 · FL-2.1.3 · K1 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale approccio ricava i test dai criteri di accettazione, come parte della progettazione del sistema? | Which approach derives tests from acceptance criteria as part of the system design process? |
+| A | Error guessing | Error guessing |
+| B | Testing di regressione | Regression testing |
+| C ✔ | Acceptance Test-Driven Development (ATDD) | Acceptance Test-Driven Development (ATDD) |
+| D | Test-Driven Development (TDD) | Test-Driven Development (TDD) |
+| Spiegazione | In ATDD i test nascono dai criteri di accettazione e sono scritti prima della parte di applicazione da sviluppare. | In ATDD tests come from the acceptance criteria and are written before the part of the application is developed. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q111 · FL-2.2.1 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale livello di test si concentra su validazione e disponibilità al rilascio, idealmente svolto dagli utenti previsti? | Which test level focuses on validation and readiness for deployment, ideally performed by the intended users? |
+| A | Test di sistema | System testing |
+| B ✔ | Test di accettazione | Acceptance testing |
+| C | Test di componente | Component testing |
+| D | Test di integrazione di componenti | Component integration testing |
+| Spiegazione | Il test di accettazione dimostra che il sistema soddisfa i bisogni di business degli utenti. | Acceptance testing demonstrates that the system meets the users’ business needs. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q112 · FL-2.2.2 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa caratterizza il white-box testing? | What characterises white-box testing? |
+| A ✔ | Ricava i test dalla struttura interna, come codice, architettura o flussi di dati, e mira a coprirla | It derives tests from the internal structure, such as code, architecture or data flows, and aims to cover it |
+| B | Ricava i test solo dalla documentazione dei requisiti | It derives tests only from the requirements documentation |
+| C | Valuta solo le caratteristiche non funzionali | It evaluates only non-functional characteristics |
+| D | Si applica solo al livello di accettazione | It applies only at the acceptance testing level |
+| Spiegazione | Il white-box testing è basato sulla struttura e punta a coprirla in misura accettabile. | White-box testing is structure-based and aims to cover the structure to an acceptable level. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q113 · FL-2.2.2 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Si verifica che una funzione di ricerca risponda entro due secondi mentre restituisce i risultati corretti. Che cosa mostra il caso? | A test checks that a search function responds within two seconds while returning the correct results. What does this show? |
+| A | Il test è solo funzionale | The test is functional testing only |
+| B | I test non funzionali si eseguono solo dopo il rilascio | Non-functional testing is run only after release |
+| C | Il test è white-box perché misura un tempo | The test is white-box because it measures a time |
+| D ✔ | Molti test non funzionali nascono da test funzionali, verificando anche un vincolo non funzionale | Many non-functional tests are derived from functional tests, also checking a non-functional constraint |
+| Spiegazione | Il syllabus spiega che molti test non funzionali riusano test funzionali aggiungendo un vincolo, come un tempo massimo. | The syllabus explains that many non-functional tests reuse functional tests while adding a constraint, such as a maximum time. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q114 · FL-2.2.3 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Dopo la correzione di un difetto il tester riesegue il test che falliva e passa. Che cosa resta da fare per controllare effetti collaterali? | After a defect is fixed, the tester re-runs the test that failed and it passes. What remains to be done to check for side effects? |
+| A | Ripetere solo lo stesso test più volte | Repeating the same test several times |
+| B | Il debugging del modulo corretto | Debugging the fixed module |
+| C ✔ | Testing di regressione, guidato dall’analisi d’impatto | Regression testing, guided by impact analysis |
+| D | Nulla: il confirmation testing basta | Nothing: confirmation testing is enough |
+| Spiegazione | La regressione cerca conseguenze indesiderate della modifica; l’analisi d’impatto aiuta a scegliere cosa ripetere. | Regression testing looks for unintended consequences of the change; impact analysis helps choose what to repeat. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q115 · FL-2.3.1 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale situazione è un trigger di testing di manutenzione? | Which situation is a trigger for maintenance testing? |
+| A | La stima iniziale del progetto | The initial project estimate |
+| B ✔ | La migrazione del sistema a una nuova piattaforma | Migrating the system to a new platform |
+| C | La stesura dei primi requisiti di un nuovo prodotto | Writing the first requirements of a new product |
+| D | La prima review del codice di un componente nuovo | The first code review of a new component |
+| Spiegazione | Aggiornamenti e migrazioni dell’ambiente operativo sono trigger tipici della manutenzione. | Upgrades and migrations of the operational environment are typical maintenance triggers. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q116 · FL-2.3.1 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un sistema viene dismesso. Che cosa può richiedere il testing di manutenzione? | A system is being retired. What may maintenance testing require? |
+| A ✔ | Verificare l’archiviazione dei dati e le procedure di ripristino o recupero | Checking data archiving and the restore or retrieval procedures |
+| B | Nulla: un sistema dismesso non si testa | Nothing: a retired system is not tested |
+| C | Solo test di prestazioni | Only performance tests |
+| D | Solo il test di componente | Only component testing |
+| Spiegazione | Il ritiro di un sistema può richiedere test di archiviazione dei dati e delle procedure di recupero. | Retiring a system may require testing data archiving and retrieval procedures. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q117 · FL-2.1.1 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In un modello di sviluppo sequenziale, che cosa fanno tipicamente i tester nelle fasi iniziali? | In a sequential development model, what do testers typically do in the early phases? |
+| A | Test dinamici su tutto il sistema | Dynamic testing of the whole system |
+| B | Test di accettazione con gli utenti | Acceptance testing with users |
+| C | Testing di regressione automatizzato | Automated regression testing |
+| D ✔ | Review dei requisiti, analisi e progettazione dei test | Requirements reviews, test analysis and test design |
+| Spiegazione | Nei modelli sequenziali il codice eseguibile arriva più tardi: all’inizio si fanno review, analisi e progettazione. | In sequential models executable code comes later: early on, testers do reviews, analysis and design. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q118 · FL-2.1.1 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché nei progetti Agile si preferiscono documentazione leggera e ampia automazione dei test? | Why do Agile projects favour lightweight documentation and extensive test automation? |
+| A | Perché la documentazione è vietata | Because documentation is forbidden |
+| B | Perché le iterazioni non producono software funzionante | Because iterations do not produce working software |
+| C ✔ | Perché il cambiamento può avvenire in tutto il progetto e la regressione va resa più facile | Because change can occur throughout the project and regression testing must be made easier |
+| D | Perché nei progetti Agile non si fa testing manuale | Because Agile projects do no manual testing |
+| Spiegazione | Il cambiamento continuo richiede documenti leggeri e automazione estesa per la regressione. | Continuous change needs lightweight documents and extensive test automation for regression testing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q119 · FL-2.1.6 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale domanda fa parte di una retrospettiva? | Which question is part of a retrospective? |
+| A | Quali test eliminare senza discuterne? | Which tests should be deleted without discussion? |
+| B ✔ | Che cosa non ha funzionato e potrebbe essere migliorato? | What was not successful and could be improved? |
+| C | Chi è il responsabile dei difetti trovati? | Who is responsible for the defects found? |
+| D | Quale stipendio assegnare ai membri del team? | What salary should team members get? |
+| Spiegazione | Le retrospettive chiedono cosa ha funzionato, cosa no e come portare i miglioramenti nel futuro. | Retrospectives ask what was successful, what was not, and how to carry improvements forward. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q120 · FL-2.1.6 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale beneficio tipico per il testing portano le retrospettive? | Which typical benefit for testing do retrospectives bring? |
+| A ✔ | Migliore qualità del testware, per esempio rivedendo insieme i processi di test | Better quality of testware, for example by reviewing the test processes together |
+| B | La garanzia che non ci saranno più difetti | A guarantee that there will be no more defects |
+| C | L’eliminazione del report di completamento | Getting rid of the test completion report |
+| D | La sostituzione della pianificazione dei test | Replacing test planning |
+| Spiegazione | Il syllabus cita testware migliore, più efficacia ed efficienza, coesione del team, base di test migliore e collaborazione. | The syllabus mentions better testware, more effectiveness and efficiency, team bonding, a better test basis and cooperation. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q121 · FL-2.1.4 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale beneficio per il testing porta DevOps? | Which benefit for testing does DevOps bring? |
+| A | L’eliminazione completa del testing manuale | Complete removal of manual testing |
+| B | L’assenza di costi per gli strumenti CI/CD | No cost for CI/CD tools |
+| C | La garanzia che la pipeline non richieda manutenzione | A guarantee that the pipeline needs no maintenance |
+| D ✔ | Feedback rapido sulla qualità del codice e su eventuali impatti negativi delle modifiche | Fast feedback on code quality and on whether changes adversely affect existing code |
+| Spiegazione | Feedback rapido, ambienti stabili e minor rischio di regressione sono benefici citati dal syllabus. | Fast feedback, stable environments and lower regression risk thanks to automated regression testing are benefits cited by the syllabus. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q122 · FL-2.1.4 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un rischio o una sfida di DevOps per il testing? | Which is a risk or challenge of DevOps for testing? |
+| A | Il feedback sul codice diventa più lento | Feedback on the code becomes slower |
+| B | Il rischio di regressione aumenta per l’automazione | Regression risk increases because of automation |
+| C ✔ | L’automazione dei test richiede risorse aggiuntive e può essere difficile da mantenere | Test automation needs additional resources and may be difficult to maintain |
+| D | La visibilità sulle caratteristiche non funzionali diminuisce | Visibility of non-functional characteristics decreases |
+| Spiegazione | Il syllabus cita pipeline da definire, strumenti da mantenere e automazione costosa da creare e mantenere. | The syllabus mentions defining the pipeline, maintaining the tools and the cost of creating and maintaining test automation. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q123 · FL-2.1.5 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale pratica realizza lo shift left? | Which practice achieves shift left? |
+| A | Scrivere i casi di test dopo il codice | Writing test cases after the code |
+| B ✔ | Rivedere le specifiche dal punto di vista del tester prima che il codice esista | Reviewing the specification from the tester’s perspective before the code exists |
+| C | Rinviare i test non funzionali al collaudo finale | Postponing non-functional testing to final acceptance |
+| D | Eseguire l’analisi statica solo dopo il rilascio | Running static analysis only after release |
+| Spiegazione | Le review delle specifiche fatte dai tester trovano presto ambiguità, incompletezze e incoerenze. | Specification reviews by testers find ambiguities, incompleteness and inconsistencies early. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q124 · FL-2.1.5 · K2 · Testing Throughout the Software Development Lifecycle
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa NON significa lo shift left? | What does shift left NOT mean? |
+| A ✔ | Trascurare il testing nelle fasi successive del ciclo di vita | Neglecting testing in the later phases of the lifecycle |
+| B | Anticipare il testing senza aspettare il codice | Testing earlier without waiting for the code |
+| C | Accettare più sforzo iniziale per risparmiarne dopo | Accepting more effort early to save effort later |
+| D | Coinvolgere gli stakeholder perché sostengano l’approccio | Getting stakeholders to support the approach |
+| Spiegazione | Il syllabus precisa che anticipare il testing non significa trascurare quello successivo. | The syllabus states that testing earlier does not mean neglecting later testing. |
 
 - [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
 
