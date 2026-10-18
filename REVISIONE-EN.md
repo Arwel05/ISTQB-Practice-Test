@@ -1,6 +1,6 @@
 # Revisione della traduzione inglese (beta)
 
-Generato da `npm run review:en`. 282 domande tradotte su 282 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
+Generato da `npm run review:en`. 302 domande tradotte su 302 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
 
 ## Per chi rivede
 
@@ -4322,6 +4322,306 @@ Note:
 | C ✔ | Affidarsi troppo allo strumento, trascurando il pensiero critico | Relying too much on the tool and neglecting critical thinking |
 | D | Ridurre i tempi di esecuzione dei test | Reducing test execution times |
 | Spiegazione | Il syllabus cita la dipendenza eccessiva dallo strumento fra i rischi. | The syllabus lists over-reliance on the tool among the risks. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q143 · FL-4.1.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un tester ricava i test dalla struttura del flusso di controllo del codice. Quale famiglia di tecniche usa? | A tester derives tests from the control flow structure of the code. Which family of techniques is this? |
+| A | Nessuna tecnica: è debugging | No technique: it is debugging |
+| B ✔ | Tecniche white-box | White-box test techniques |
+| C | Tecniche black-box | Black-box test techniques |
+| D | Tecniche basate sull’esperienza | Experience-based test techniques |
+| Spiegazione | Le tecniche white-box si basano sulla struttura interna del test object, come il flusso di controllo. | White-box techniques are based on the internal structure of the test object, such as control flow. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q144 · FL-4.1.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale famiglia di tecniche usa come base principale conoscenza ed esperienza del tester? | Which family of techniques is mainly based on the tester’s knowledge and experience? |
+| A ✔ | Tecniche basate sull’esperienza | Experience-based test techniques |
+| B | Tecniche black-box | Black-box test techniques |
+| C | Tecniche white-box | White-box test techniques |
+| D | Tecniche di analisi statica automatica | Automated static analysis techniques |
+| Spiegazione | Error guessing, testing esplorativo e checklist sfruttano l’esperienza di chi testa. | Error guessing, exploratory testing and checklist-based testing draw on the tester’s experience. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q145 · FL-4.3.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un programma ha 40 istruzioni eseguibili e la suite ne esegue 30. Quale affermazione è corretta? | A program has 40 executable statements and the suite executes 30. Which statement is correct? |
+| A | La copertura delle istruzioni è del 30% | Statement coverage is 30% |
+| B | La copertura dei rami è sicuramente del 75% | Branch coverage is certainly 75% |
+| C | Il 75% dei difetti è stato trovato | 75% of the defects have been found |
+| D ✔ | La copertura delle istruzioni è del 75%, ma questo non dimostra che le istruzioni eseguite siano corrette | Statement coverage is 75%, but this does not prove that the executed statements are correct |
+| Spiegazione | 30 su 40 dà il 75%; la copertura misura l’esecuzione, non la correttezza dei risultati. | 30 out of 40 gives 75%; coverage measures execution, not the correctness of the results. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q146 · FL-4.3.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa NON garantisce il 100% di copertura delle istruzioni? | What does 100% statement coverage NOT guarantee? |
+| A | Che i test abbiano esercitato il codice | That the tests exercised the code |
+| B | Che esista una misura di copertura definita | That a defined coverage measure exists |
+| C ✔ | Che tutta la logica delle decisioni sia stata testata, per esempio entrambi gli esiti di ogni decisione | That all the decision logic has been tested, for example both outcomes of every decision |
+| D | Che ogni istruzione eseguibile sia stata eseguita almeno una volta | That every executable statement has run at least once |
+| Spiegazione | Si possono eseguire tutte le istruzioni senza percorrere l’esito falso di un IF senza ELSE. | You can execute every statement without taking the false outcome of an IF with no ELSE. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q147 · FL-4.3.2 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa conta come ramo nella copertura dei rami? | What counts as a branch in branch coverage? |
+| A | Ogni istruzione eseguibile | Every executable statement |
+| B ✔ | Un trasferimento di controllo fra due nodi del grafo di flusso, condizionato o incondizionato | A transfer of control between two nodes of the control flow graph, conditional or unconditional |
+| C | Solo l’esito vero di ogni IF | Only the true outcome of each IF |
+| D | Ogni riga di commento | Every comment line |
+| Spiegazione | Il syllabus considera rami sia i trasferimenti condizionati sia quelli incondizionati. | The syllabus counts both conditional and unconditional transfers of control as branches. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q148 · FL-4.3.3 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un punto di forza del white-box testing? | What is a strength of white-box testing? |
+| A ✔ | Tiene conto dell’intera implementazione, quindi trova difetti anche quando le specifiche sono vaghe o incomplete | It takes the whole implementation into account, so it finds defects even when specifications are vague or incomplete |
+| B | Trova sempre i requisiti non implementati | It always finds requirements that were not implemented |
+| C | Non richiede di conoscere il codice | It needs no knowledge of the code |
+| D | Sostituisce il testing black-box | It replaces black-box testing |
+| Spiegazione | Il syllabus indica questo vantaggio, insieme alla misura oggettiva della copertura. | The syllabus cites this advantage, together with an objective measure of coverage. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q149 · FL-4.3.3 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Il white-box testing si può usare anche nel testing statico? | Can white-box testing also be used in static testing? |
+| A | No, richiede sempre l’esecuzione | No, it always requires execution |
+| B | Solo per il test di accettazione | Only for acceptance testing |
+| C | Solo con strumenti di test di carico | Only with load testing tools |
+| D ✔ | Sì, per esempio con dry run su codice, pseudocodice o diagrammi di flusso | Yes, for example in dry runs of code, pseudocode or flowcharts |
+| Spiegazione | Il syllabus cita i dry run su codice non ancora eseguibile, pseudocodice e logica di alto livello. | The syllabus mentions dry runs of code not yet executable, pseudocode and high-level logic. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q150 · FL-4.4.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cos’è un fault attack? | What is a fault attack? |
+| A | Un tipo di test di carico | A kind of load test |
+| B | Una review formale del codice | A formal code review |
+| C ✔ | Un approccio strutturato all’error guessing: si elencano possibili errori, difetti e malfunzionamenti e si progettano test per esporli | A structured approach to error guessing: list possible errors, defects and failures and design tests to expose them |
+| D | Un attacco informatico al sistema in produzione | A cyber attack on the production system |
+| Spiegazione | I fault attack sono il modo metodico di applicare l’error guessing. | Fault attacks are the methodical way of applying error guessing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q151 · FL-4.4.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Su che cosa si basa l’error guessing? | What is error guessing based on? |
+| A | Sulle quote dell’esame | On the exam quotas |
+| B ✔ | Sulla conoscenza di come l’applicazione ha funzionato in passato, degli errori tipici degli sviluppatori e dei malfunzionamenti di applicazioni simili | Knowledge of how the application has worked in the past, the kinds of errors developers make, and failures in similar applications |
+| C | Solo sulle partizioni di equivalenza | Only on equivalence partitions |
+| D | Sulla copertura dei rami | On branch coverage |
+| Spiegazione | L’error guessing anticipa errori, difetti e malfunzionamenti grazie all’esperienza. | Error guessing anticipates errors, defects and failures through experience. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q152 · FL-4.4.2 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In quale situazione il testing esplorativo è particolarmente utile? | In which situation is exploratory testing particularly useful? |
+| A ✔ | Quando le specifiche sono poche o inadeguate o c’è forte pressione sui tempi | When specifications are few or inadequate, or under significant time pressure |
+| B | Solo quando esistono specifiche formali complete | Only when complete formal specifications exist |
+| C | Solo per i test di componente automatizzati | Only for automated component tests |
+| D | Mai insieme ad altre tecniche | Never together with other techniques |
+| Spiegazione | Il syllabus indica proprio specifiche scarse e pressione sui tempi; l’esplorazione completa le tecniche più formali. | The syllabus names exactly scarce specifications and time pressure; exploratory testing complements more formal techniques. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q153 · FL-4.4.2 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quali caratteristiche del tester rendono più efficace il testing esplorativo? | Which tester qualities make exploratory testing more effective? |
+| A | Solo la velocità di battitura | Only typing speed |
+| B | Solo la conoscenza di un linguaggio di programmazione | Only knowledge of a programming language |
+| C | L’assenza di conoscenze sul prodotto | No knowledge of the product |
+| D ✔ | Esperienza, conoscenza del dominio, capacità analitiche, curiosità e creatività | Experience, domain knowledge, analytical skills, curiosity and creativity |
+| Spiegazione | Il syllabus elenca queste qualità come fattori di efficacia del testing esplorativo. | The syllabus lists these qualities as making exploratory testing more effective. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q154 · FL-4.4.3 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale elemento NON dovrebbe stare in una checklist per il checklist-based testing? | Which item should NOT be in a checklist for checklist-based testing? |
+| A | Un controllo basato sull’esperienza di malfunzionamenti passati | A check based on experience of past failures |
+| B | Un aspetto importante per l’utente | An aspect that matters to the user |
+| C ✔ | Un elemento che si può verificare automaticamente | An item that can be checked automatically |
+| D | Una domanda formulata in modo verificabile | A question phrased so it can be verified |
+| Spiegazione | Il syllabus esclude elementi verificabili automaticamente, troppo generici o più adatti come criteri di ingresso o uscita. | The syllabus excludes items that can be checked automatically, items that are too general, and items better suited as entry or exit criteria. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q155 · FL-4.4.3 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che effetto hanno le checklist di alto livello? | What effect do high-level checklists have? |
+| A | Eliminano la necessità di aggiornarle | They never need updating |
+| B ✔ | Più variabilità e copertura nei test, ma meno ripetibilità | More variability and coverage in the tests, but less repeatability |
+| C | Massima ripetibilità dei test | Maximum repeatability of the tests |
+| D | Nessuna differenza rispetto a casi di test dettagliati | No difference compared with detailed test cases |
+| Spiegazione | Il syllabus nota che checklist generali portano variabilità e copertura a scapito della ripetibilità. | The syllabus notes that high-level checklists bring variability and coverage at the cost of repeatability. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q156 · FL-4.5.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quali sono le 3C di una user story? | What are the 3Cs of a user story? |
+| A ✔ | Card, Conversation, Confirmation | Card, Conversation, Confirmation |
+| B | Code, Compile, Commit | Code, Compile, Commit |
+| C | Cost, Coverage, Criteria | Cost, Coverage, Criteria |
+| D | Customer, Contract, Change | Customer, Contract, Change |
+| Spiegazione | La scheda descrive la storia, la conversazione la chiarisce, la conferma ne definisce i criteri di accettazione. | The card describes the story, the conversation clarifies it, and the confirmation defines its acceptance criteria. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q157 · FL-4.5.1 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché una user story va scritta insieme da business, sviluppo e testing? | Why should a user story be written by business, development and testing together? |
+| A | Perché il tester deve approvare da solo ogni storia | Because the tester must approve every story alone |
+| B | Per evitare di scrivere criteri di accettazione | To avoid writing acceptance criteria |
+| C | Perché lo sviluppo non deve conoscere il bisogno | Because development must not know the need |
+| D ✔ | Per ottenere una visione condivisa di che cosa realizzare, combinando prospettive diverse | To reach a shared vision of what to deliver, combining different perspectives |
+| Spiegazione | La collaborazione costruisce una comprensione comune e storie testabili. | Collaboration builds a common understanding and testable stories. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q158 · FL-4.5.2 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un formato orientato agli scenari per scrivere i criteri di accettazione? | Which is a scenario-oriented format for writing acceptance criteria? |
+| A | Una tabella che associa input e output | A table mapping inputs to outputs |
+| B | Un diagramma di Gantt | A Gantt chart |
+| C ✔ | Given/When/Then, come nel BDD | Given/When/Then, as in BDD |
+| D | Un elenco puntato di verifiche | A bulleted list of verifications |
+| Spiegazione | Il formato scenario-oriented descrive contesto, evento e risultato atteso. | The scenario-oriented format describes context, event and expected result. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q159 · FL-4.5.2 · K2 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | A che cosa servono i criteri di accettazione? | What are acceptance criteria used for? |
+| A | A misurare la velocità del team | Measuring the team’s velocity |
+| B ✔ | A definire l’ambito della storia, raggiungere consenso fra gli stakeholder e fare da base al testing di accettazione | Defining the scope of the story, reaching consensus among stakeholders, and serving as the basis for acceptance testing |
+| C | A sostituire la conversazione sulla storia | Replacing the conversation about the story |
+| D | A fissare l’implementazione tecnica | Fixing the technical implementation |
+| Spiegazione | Il syllabus elenca anche la descrizione di scenari positivi e negativi e il supporto a pianificazione e stima. | The syllabus also lists describing positive and negative scenarios and supporting planning and estimation. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q160 · FL-4.2.4 · K3 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Modello a stati: Bloccato →(codice corretto)→ Attivo; Attivo →(timeout)→ Bloccato; Attivo →(logout)→ Uscito; Uscito →(login)→ Attivo. Partendo da Bloccato, quale sequenza copre tutte le transizioni valide in un solo test? | State model: Locked →(correct code)→ Active; Active →(timeout)→ Locked; Active →(logout)→ Logged out; Logged out →(login)→ Active. Starting from Locked, which sequence covers all valid transitions in a single test? |
+| A ✔ | codice corretto, timeout, codice corretto, logout, login | correct code, timeout, correct code, logout, login |
+| B | codice corretto, logout, login | correct code, logout, login |
+| C | codice corretto, timeout, codice corretto, timeout | correct code, timeout, correct code, timeout |
+| D | logout, login, timeout | logout, login, timeout |
+| Spiegazione | Copre Bloccato→Attivo, Attivo→Bloccato, Attivo→Uscito e Uscito→Attivo: tutte e quattro le transizioni valide. | It covers Locked→Active, Active→Locked, Active→Logged out and Logged out→Active: all four valid transitions. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q161 · FL-4.5.3 · K3 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Storia: «Come cliente voglio cambiare la password; la nuova deve avere almeno 8 caratteri ed essere diversa dall’attuale». Con ATDD, quale insieme di test copre la storia senza andare oltre? | Story: “As a customer I want to change my password; the new one must have at least 8 characters and differ from the current one”. With ATDD, which set of tests covers the story without going beyond it? |
+| A | Solo una password valida accettata | Only a valid password accepted |
+| B | Password valida accettata; password senza caratteri speciali rifiutata | Valid password accepted; password without special characters rejected |
+| C | Password di 7 caratteri rifiutata; email di conferma inviata | 7-character password rejected; confirmation email sent |
+| D ✔ | Password nuova di 8 caratteri accettata; di 7 caratteri rifiutata; uguale all’attuale rifiutata | New 8-character password accepted; 7-character password rejected; password identical to the current one rejected |
+| Spiegazione | Copre il caso positivo e entrambe le regole della storia, senza aggiungere requisiti. | It covers the positive case and both rules of the story, without adding requirements. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q162 · FL-4.5.3 · K3 · Test Analysis and Design
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In un workshop ATDD il team ha scritto il caso positivo di una storia. Quale passo viene dopo? | In an ATDD workshop the team has written the positive case of a story. What comes next? |
+| A | Aggiungere esempi per funzionalità non presenti nella storia | Adding examples for features not in the story |
+| B | Duplicare il caso positivo con valori simili | Duplicating the positive case with similar values |
+| C ✔ | Scrivere i casi negativi e, se pertinenti, test non funzionali | Writing the negative cases and, where relevant, non-functional testing |
+| D | Automatizzare subito senza altri casi | Automating straight away with no other cases |
+| Spiegazione | In ATDD dopo il percorso positivo si coprono i casi negativi e gli attributi non funzionali. | In ATDD, after the positive path come the negative cases and the non-functional attributes. |
 
 - [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
 
