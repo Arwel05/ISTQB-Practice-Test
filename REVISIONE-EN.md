@@ -1,6 +1,6 @@
 # Revisione della traduzione inglese (beta)
 
-Generato da `npm run review:en`. 302 domande tradotte su 302 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
+Generato da `npm run review:en`. 332 domande tradotte su 332 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
 
 ## Per chi rivede
 
@@ -4622,6 +4622,456 @@ Note:
 | C ✔ | Scrivere i casi negativi e, se pertinenti, test non funzionali | Writing the negative cases and, where relevant, non-functional testing |
 | D | Automatizzare subito senza altri casi | Automating straight away with no other cases |
 | Spiegazione | In ATDD dopo il percorso positivo si coprono i casi negativi e gli attributi non funzionali. | In ATDD, after the positive path come the negative cases and the non-functional attributes. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q163 · FL-5.1.2 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale contributo del tester appartiene alla release planning? | Which tester contribution belongs to release planning? |
+| A | Correggere i difetti trovati | Fixing the defects found |
+| B ✔ | Partecipare alle analisi dei rischi di progetto e di qualità e pianificare il testing del rilascio | Taking part in project and quality risk analyses and planning the testing for the release |
+| C | Scomporre una singola storia in task di test dell’iterazione | Breaking a single story into test tasks for the iteration |
+| D | Eseguire i test di regressione notturni | Running the nightly regression testing |
+| Spiegazione | Nella release planning il tester scrive storie e criteri testabili, analizza i rischi, stima e definisce l’approccio di test. | In release planning the tester writes testable stories and criteria, analyses risks, estimates and defines the test approach. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q164 · FL-5.1.2 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale contributo del tester appartiene all’iteration planning? | Which tester contribution belongs to iteration planning? |
+| A ✔ | Valutare la testabilità delle user story e stimare lo sforzo di tutti i task di test | Assessing the testability of user stories and estimating the effort of all testing tasks |
+| B | Ridefinire il product backlog dell’intero rilascio | Redefining the product backlog for the whole release |
+| C | Approvare il budget del progetto | Approving the project budget |
+| D | Firmare il contratto con il cliente | Signing the contract with the customer |
+| Spiegazione | Analisi dettagliata dei rischi, testabilità, task di test e stime appartengono all’iteration planning. | Detailed risk analysis, testability, testing tasks and estimates belong to iteration planning. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q165 · FL-5.1.6 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa rappresentano gli strati più bassi della piramide dei test? | What do the lowest layers of the test pyramid represent? |
+| A | Pochi test end-to-end lenti | A few slow end-to-end tests |
+| B | Solo test manuali di accettazione | Only manual acceptance tests |
+| C | Solo test non funzionali | Only non-functional tests |
+| D ✔ | Molti test piccoli, isolati e veloci | Many small, isolated and fast tests |
+| Spiegazione | Alla base ci sono molti test piccoli e rapidi; salendo i test diventano più complessi, lenti e meno numerosi. | At the base there are many small, fast tests; going up, tests become more complex, slower and fewer. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q166 · FL-5.1.6 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale affermazione sulla piramide dei test è corretta? | Which statement about the test pyramid is correct? |
+| A | Impone di non automatizzare i test di interfaccia | It forbids automating UI tests |
+| B | Mette i test end-to-end alla base | It puts end-to-end tests at the base |
+| C ✔ | Numero e nomi degli strati possono variare, per esempio unità, servizi e interfaccia utente | The number and names of the layers can vary, for example unit, service and UI |
+| D | Ha sempre esattamente tre strati con nomi fissi | It always has exactly three layers with fixed names |
+| Spiegazione | Il syllabus precisa che il modello può avere strati diversi a seconda del contesto. | The syllabus notes that the model can have different layers depending on the context. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q167 · FL-5.2.1 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Da quali due fattori dipende il livello di rischio? | Which two factors determine the risk level? |
+| A | Copertura e velocità | Coverage and velocity |
+| B ✔ | Probabilità e impatto | Risk likelihood and risk impact |
+| C | Costo e durata del progetto | Project cost and duration |
+| D | Numero di tester e di sviluppatori | Number of testers and developers |
+| Spiegazione | Il livello di rischio si ricava dalla probabilità che il problema si verifichi e dal suo impatto. | The risk level comes from the likelihood of the problem occurring and its impact. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q168 · FL-5.2.1 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Due rischi: A ha probabilità alta e impatto basso; B ha probabilità media e impatto molto alto. Che cosa serve per confrontarli? | Two risks: A has high likelihood and low impact; B has medium likelihood and very high impact. What is needed to compare them? |
+| A ✔ | Combinare probabilità e impatto, per esempio con una matrice dei rischi | Combining likelihood and impact, for example with a risk matrix |
+| B | Considerare solo la probabilità | Considering likelihood only |
+| C | Considerare solo l’ordine in cui sono stati scoperti | Considering only the order in which they were found |
+| D | Considerare solo chi li ha segnalati | Considering only who reported them |
+| Spiegazione | Il livello di rischio unisce i due fattori, in modo quantitativo o qualitativo con una matrice. | The risk level combines the two factors, quantitatively or qualitatively with a matrix. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q169 · FL-5.3.1 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è una metrica di qualità del prodotto? | Which is a product quality metric? |
+| A | Il numero di casi di test implementati | The number of test cases implemented |
+| B | L’uso delle risorse del progetto | Project resource usage |
+| C | Il costo del testing | The cost of testing |
+| D ✔ | Il tempo medio tra i malfunzionamenti (MTTF) | Mean time to failure (MTTF) |
+| Spiegazione | Disponibilità, tempo di risposta e MTTF sono metriche di qualità del prodotto. | Availability, response time and MTTF are product quality metrics. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q170 · FL-5.3.1 · K1 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è una metrica relativa ai difetti? | Which is a defect metric? |
+| A | L’avanzamento della preparazione dell’ambiente | Progress of test environment preparation |
+| B | La copertura dei requisiti | Requirements coverage |
+| C ✔ | La percentuale di difetti rilevati (defect detection percentage) | Defect detection percentage |
+| D | Il tempo di risposta dell’applicazione | Application response time |
+| Spiegazione | Numero e priorità dei difetti, densità e percentuale di rilevamento sono metriche dei difetti. | Number and priority of defects, defect density and defect detection percentage are defect metrics. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q171 · FL-5.1.1 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale contenuto fa parte di un piano di test? | Which content belongs in a test plan? |
+| A | Le valutazioni individuali dei tester | The testers’ individual appraisals |
+| B ✔ | Approccio di test, con livelli, tipi, tecniche e criteri di ingresso e di uscita | The test approach, with test levels, test types, test techniques, and entry criteria and exit criteria |
+| C | Il codice sorgente del prodotto | The product source code |
+| D | I log di esecuzione già raccolti | The test logs already collected |
+| Spiegazione | Il piano descrive contesto, stakeholder, comunicazione, rischi, approccio, budget e calendario. | The test plan describes context, stakeholders, communication, risks, approach, budget and schedule. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q172 · FL-5.1.1 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Qual è uno scopo del piano di test? | What is one purpose of a test plan? |
+| A ✔ | Documentare mezzi e calendario per raggiungere gli obiettivi di test e favorire la comunicazione | Documenting the means and schedule for achieving the test objectives, and supporting communication |
+| B | Garantire l’assenza di difetti | Guaranteeing the absence of defects |
+| C | Sostituire la strategia di test dell’organizzazione | Replacing the organisation’s test strategy |
+| D | Evitare ogni modifica durante il progetto | Preventing any change during the project |
+| Spiegazione | Il piano aiuta a rispettare criteri, comunicare e ragionare in anticipo sulle difficoltà. | The test plan helps meet criteria, communicate and think ahead about challenges. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q173 · FL-5.1.3 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un tipico criterio di ingresso? | Which of these is typical of entry criteria? |
+| A | Il livello di copertura concordato è stato raggiunto | The agreed level of coverage has been reached |
+| B | Tutti i difetti trovati sono stati segnalati | All defects found have been reported |
+| C | I test di regressione sono tutti automatizzati | All regression testing is automated |
+| D ✔ | Tutti gli smoke test sono stati superati | All smoke tests have passed |
+| Spiegazione | La qualità iniziale del test object, come smoke test superati, è un criterio di ingresso tipico. | The initial quality of the test object, such as passed smoke tests, is typical of entry criteria. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q174 · FL-5.1.3 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Il tempo è finito ma la copertura concordata non è stata raggiunta. Quando è accettabile chiudere comunque il testing? | Time has run out but the agreed coverage has not been reached. When is it acceptable to stop testing anyway? |
+| A | Sempre: il tempo prevale su tutto | Always: time beats everything |
+| B | Quando il tester lo decide da solo | When the tester decides alone |
+| C ✔ | Quando gli stakeholder hanno valutato e accettato il rischio di andare in produzione senza altri test | When stakeholders have reviewed and accepted the risk of going live without further testing |
+| D | Mai: i criteri di uscita vanno sempre raggiunti | Never: exit criteria must always be met |
+| Spiegazione | Il syllabus considera validi tempo e budget esauriti, se gli stakeholder accettano consapevolmente il rischio. | The syllabus treats running out of time or budget as a valid exit criterion if stakeholders consciously accept the risk. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q175 · FL-5.1.7 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In quale quadrante si collocano i test di componente e di integrazione di componenti, automatizzati nella CI? | Which quadrant do component testing and component integration testing, automated in CI, belong to? |
+| A | Q4: orientati alla tecnologia, critica del prodotto | Q4: technology facing, critiquing the product |
+| B ✔ | Q1: orientati alla tecnologia, a supporto del team | Q1: technology facing, supporting the team |
+| C | Q2: orientati al business, a supporto del team | Q2: business facing, supporting the team |
+| D | Q3: orientati al business, critica del prodotto | Q3: business facing, critiquing the product |
+| Spiegazione | Q1 contiene test di componente e di integrazione di componenti, da automatizzare nella CI. | Q1 contains component testing and component integration testing, to be automated in CI. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q176 · FL-5.1.7 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In quale quadrante si colloca il test di usabilità? | Which quadrant does usability testing belong to? |
+| A ✔ | Q3: orientato al business, critica del prodotto | Q3: business facing, critiquing the product |
+| B | Q4: orientato alla tecnologia, critica del prodotto | Q4: technology facing, critiquing the product |
+| C | Q1: orientato alla tecnologia, a supporto del team | Q1: technology facing, supporting the team |
+| D | Q2: orientato al business, a supporto del team | Q2: business facing, supporting the team |
+| Spiegazione | Il syllabus mette usabilità, esplorazione e accettazione utente in Q3. | The syllabus places usability, exploratory testing and user acceptance testing in Q3. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q177 · FL-5.2.2 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un rischio di progetto? | Which is a project risk? |
+| A | Un calcolo produce risultati sbagliati | A calculation produces wrong results |
+| B | Il tempo di risposta è inadeguato | Response time is inadequate |
+| C | Una vulnerabilità di sicurezza | A security vulnerability |
+| D ✔ | Un fornitore terzo non consegna in tempo un componente | A third-party supplier fails to deliver a component on time |
+| Spiegazione | I problemi dei fornitori sono rischi di progetto, come quelli organizzativi, di persone e tecnici. | Supplier issues are project risks, like organisational, people and technical issues. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q178 · FL-5.2.2 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è una possibile conseguenza di un rischio di prodotto che si realizza? | Which is a possible consequence of a product risk that materialises? |
+| A | Mancanza di personale nel team | A shortage of staff in the team |
+| B | Stime imprecise del progetto | Inaccurate project estimates |
+| C ✔ | Insoddisfazione degli utenti e perdita di reputazione | User dissatisfaction and loss of reputation |
+| D | Ritardo nella consegna dell’ambiente di test | A delay in delivering the test environment |
+| Spiegazione | Il syllabus elenca insoddisfazione, perdita di ricavi, fiducia e reputazione e, nei casi estremi, danni fisici. | The syllabus lists dissatisfaction, loss of revenue, trust and reputation and, in extreme cases, physical harm. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q179 · FL-5.2.3 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Come può influire l’analisi dei rischi di prodotto sul testing? | How can product risk analysis influence testing? |
+| A | Stabilisce solo il calendario delle riunioni | It only sets the meeting schedule |
+| B ✔ | Determina ambito, livelli, tipi, tecniche e copertura dei test, oltre alla loro priorità | It determines the scope, test levels, test types, test techniques and coverage, and the priority of testing |
+| C | Non influisce: il testing è sempre uguale | It does not: testing is always the same |
+| D | Elimina la necessità di stimare lo sforzo | It removes the need to estimate effort |
+| Spiegazione | L’analisi dei rischi orienta ampiezza e profondità del testing e aiuta a trovare presto i difetti critici. | Risk analysis guides the breadth and depth of testing and helps find critical defects early. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q180 · FL-5.2.3 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | L’analisi dei rischi indica che un modulo ha un rischio molto alto. Quale conseguenza è più coerente? | Risk analysis shows that a module has a very high risk level. Which consequence is most consistent? |
+| A ✔ | Testarlo più a fondo e presto, con tecniche e copertura adeguate | Test it more thoroughly and earlier, with suitable techniques and coverage |
+| B | Testarlo per ultimo, con meno test | Test it last, with fewer tests |
+| C | Escluderlo dal testing | Exclude it from testing |
+| D | Testarlo come ogni altro modulo, senza differenze | Test it like any other module, with no difference |
+| Spiegazione | Più rischio significa più priorità e più profondità di testing. | More risk means higher priority and more thorough testing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q181 · FL-5.2.4 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale azione mitiga un rischio di prodotto tramite il testing? | Which action mitigates a product risk through testing? |
+| A | Trasferire il rischio a un’assicurazione | Transferring the risk to an insurer |
+| B | Accettare il rischio senza fare nulla | Accepting the risk and doing nothing |
+| C | Preparare un piano di emergenza | Preparing a contingency plan |
+| D ✔ | Applicare tecniche di test e livelli di copertura adeguati al rischio | Applying test techniques and coverage levels suited to the risk |
+| Spiegazione | Scegliere tester adatti, indipendenza, review, tecniche, tipi di test e regressione sono azioni di mitigazione tramite testing. | Choosing suitable testers, independence, reviews, techniques, test types and regression testing are mitigation actions through testing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q182 · FL-5.2.4 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In che cosa consiste il controllo dei rischi di prodotto? | What does product risk control consist of? |
+| A | Solo nella stima dei costi | Only cost estimation |
+| B | Solo nella scrittura del piano di test | Only writing the test plan |
+| C ✔ | In mitigazione e monitoraggio dei rischi | Risk mitigation and risk monitoring |
+| D | Solo nell’identificazione dei rischi | Only risk identification |
+| Spiegazione | Il monitoraggio verifica che le azioni di mitigazione funzionino e fa emergere nuovi rischi. | Risk monitoring checks that mitigation actions work and brings emerging risks to light. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q183 · FL-5.3.2 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale contenuto è tipico di un report di avanzamento dei test? | Which content is typical of a test progress report? |
+| A | Il codice sorgente modificato | The modified source code |
+| B ✔ | Impedimenti e soluzioni adottate, rischi nuovi o cambiati e testing previsto per il periodo successivo | Impediments and workarounds, new or changed risks, and the testing planned for the next period |
+| C | Le lezioni apprese dell’intero progetto | The lessons learned from the whole project |
+| D | Solo l’elenco dei nomi dei tester | Only the list of testers’ names |
+| Spiegazione | Il report di avanzamento supporta il controllo in corso: periodo, avanzamento, impedimenti, metriche, rischi e prossimi passi. | The progress report supports ongoing test control: period, progress, impediments, metrics, risks and next steps. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q184 · FL-5.3.2 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché i report di test vanno adattati al pubblico? | Why should test reports be tailored to the audience? |
+| A ✔ | Perché destinatari diversi hanno bisogno di informazioni e formalità diverse | Because different audiences need different information and formality |
+| B | Perché i dati cambiano a seconda di chi legge | Because the data change depending on who reads them |
+| C | Perché i report formali sono vietati | Because formal reports are forbidden |
+| D | Perché solo il team di sviluppo li legge | Because only the development team reads them |
+| Spiegazione | Un report per il team è diverso da uno per gli stakeholder, per contenuto e formalità. | A report for the team differs from one for stakeholders, in content and formality. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q185 · FL-5.3.3 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Il team è distribuito su più fusi orari. Quale modo di comunicare lo stato dei test è più adatto? | The team is spread across several time zones. Which way of communicating test status fits best? |
+| A | Solo conversazioni a voce nello stesso ufficio | Only face-to-face conversations in the same office |
+| B | Nessuna comunicazione fino alla fine del progetto | No communication until the end of the project |
+| C | Solo messaggi personali a un singolo collega | Only private messages to a single colleague |
+| D ✔ | Una comunicazione più formale, per esempio report o documentazione online | More formal communication, for example reports or online documentation |
+| Spiegazione | Il syllabus indica che la comunicazione più formale è più adatta ai team distribuiti. | The syllabus says more formal communication suits distributed teams better. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q186 · FL-5.3.3 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale strumento è un esempio di dashboard per comunicare lo stato dei test? | Which tool is an example of a dashboard for communicating test status? |
+| A | Un diagramma entità-relazione | An entity-relationship diagram |
+| B | Il manuale utente | The user manual |
+| C ✔ | Una burn-down chart o una task board | A burn-down chart or a task board |
+| D | Un contratto firmato | A signed contract |
+| Spiegazione | Il syllabus cita dashboard CI/CD, task board e burn-down chart. | The syllabus mentions CI/CD dashboards, task boards and burn-down charts. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q187 · FL-5.4.1 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Come supporta il testing il configuration management? | How does configuration management support testing? |
+| A | Misura la copertura del codice | It measures code coverage |
+| B ✔ | Identifica, controlla e traccia i prodotti di test come configuration item, con versioni e baseline | It identifies, controls and tracks test work products as configuration items, with versions and baselines |
+| C | Sostituisce la gestione dei difetti | It replaces defect management |
+| D | Stabilisce le priorità dei test | It sets test priorities |
+| Spiegazione | Piani, casi, script, risultati e log diventano configuration item versionati e collegati fra loro. | Test plans, test cases, scripts, results and logs become versioned configuration items linked together. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q188 · FL-5.4.1 · K2 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché è utile poter tornare a una baseline precedente? | Why is it useful to be able to revert to an earlier baseline? |
+| A ✔ | Per riprodurre i risultati di test ottenuti in passato | To reproduce test results obtained in the past |
+| B | Per cancellare definitivamente i difetti | To delete defects permanently |
+| C | Per evitare di versionare i test | To avoid versioning the tests |
+| D | Per saltare il controllo delle modifiche | To skip change control |
+| Spiegazione | Il configuration management registra ciò che cambia a ogni baseline e permette di tornare indietro per riprodurre i risultati. | Configuration management records what changes in each baseline and allows going back to reproduce results. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q189 · FL-5.1.4 · K3 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In progetti simili il rapporto fra sforzo di sviluppo e di test è 3:2. Lo sviluppo è stimato in 600 giornate. Quale stima basata sul rapporto dà il testing? | On similar projects the ratio of development effort to test effort is 3:2. Development is estimated at 600 days. Which ratio-based estimate does this give for testing? |
+| A | 900 giornate | 900 days |
+| B | 200 giornate | 200 days |
+| C | 240 giornate | 240 days |
+| D ✔ | 400 giornate | 400 days |
+| Spiegazione | Con un rapporto 3:2 il test vale due terzi dello sviluppo: 600 × 2 / 3 = 400. | With a 3:2 ratio, testing is two-thirds of development: 600 × 2 / 3 = 400. This is estimation based on ratios. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q190 · FL-5.1.5 · K3 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Casi di test: TC1 priorità alta, richiede che prima venga eseguito TC3; TC2 priorità media; TC3 priorità bassa, nessuna dipendenza; TC4 priorità bassa, nessuna dipendenza. Quale ordine segue la priorità rispettando le dipendenze? | Test cases: TC1 high priority, requires TC3 to run first; TC2 medium priority; TC3 low priority, no dependency; TC4 low priority, no dependency. Which order follows priority while respecting dependencies? |
+| A | TC1, TC2, TC3, TC4 | TC1, TC2, TC3, TC4 |
+| B | TC3, TC4, TC1, TC2 | TC3, TC4, TC1, TC2 |
+| C ✔ | TC3, TC1, TC2, TC4 | TC3, TC1, TC2, TC4 |
+| D | TC1, TC3, TC2, TC4 | TC1, TC3, TC2, TC4 |
+| Spiegazione | TC1 è il più importante ma richiede TC3: si esegue TC3, poi TC1, poi TC2 (media) e infine TC4 (bassa). | TC1 matters most but needs TC3: run TC3, then TC1, then TC2 (medium) and finally TC4 (low). |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q191 · FL-5.5.1 · K3 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Un defect report contiene titolo, passi per riprodurre, risultato atteso e ottenuto, gravità e priorità. Quale informazione importante manca? | A defect report contains title, steps to reproduce, expected and actual results, severity and priority. Which important information is missing? |
+| A | Un’opinione sullo sviluppatore | An opinion about the developer |
+| B ✔ | L’identificazione del test object e dell’ambiente di test, con le versioni | Identification of the test object and test environment, with versions |
+| C | Il nome del project manager | The project manager’s name |
+| D | Una stima del costo di correzione | An estimate of the cost of the fix |
+| Spiegazione | Senza versione del test object e ambiente è difficile riprodurre e isolare il problema. | Without the version of the test object and environment, the problem is hard to reproduce and isolate. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q192 · FL-5.5.1 · K3 · Managing the Test Activities
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale titolo di defect report è più utile? | Which defect report title is most useful? |
+| A ✔ | Il totale dell’ordine applica due volte lo sconto quando si usano due coupon | The order total applies the discount twice when two coupons are used |
+| B | Bug nel carrello!!! | Bug in the cart!!! |
+| C | Non funziona niente | Nothing works |
+| D | Errore trovato da Marco | Error found by Mark |
+| Spiegazione | Un buon titolo riassume in breve che cosa non va e in quale situazione. | A good title briefly sums up what is wrong and in which situation. |
 
 - [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
 
