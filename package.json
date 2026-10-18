@@ -1,6 +1,6 @@
 {
   "name": "testpilot-ctfl",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "private": true,
   "description": "Trainer CTFL italiano, portatile e offline",
   "scripts": {
@@ -10,8 +10,9 @@
     "start": "node scripts/serve.js",
     "start:web": "node scripts/serve.js web",
     "review:en": "node scripts/review-sheet.js",
-    "check:agile-sample": "node scripts/check-agile-sample.js",
     "review:agile": "node scripts/review-agile.js",
-    "check:terms": "node scripts/check-terms.js"
+    "check:terms": "node scripts/check-terms.js",
+    "check:sample": "node scripts/check-sample.js",
+    "review:foundation": "node scripts/review-foundation.js"
   }
 }

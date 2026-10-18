@@ -49,3 +49,11 @@ test('once every group is covered, 100 mock exams follow the official quotas',()
   assert.deepEqual([1,2,3].map(k=>exam.filter(q=>q.k===k).length),[8,24,8]);
   assert.deepEqual([1,2,3,4,5,6].map(c=>exam.filter(q=>q.chapter===c).length),[...C.WEIGHTS]);}
 });
+test('Foundation reviewer sheet is up to date',()=>{
+ const {sheet}=require('../scripts/review-foundation.js');
+ assert.equal(fs.readFileSync(path.join(__dirname,'../REVISIONE-FOUNDATION.md'),'utf8').replace(/\r\n/g,'\n'),sheet(),'run npm run review:foundation');
+});
+test('original questions do not show the Graner/Mappa legend of adapted Agile sources',()=>{
+ const app=fs.readFileSync(path.join(__dirname,'../src/app.js'),'utf8');
+ assert.match(app,/\/quesito originale\/\.test\(q\.source\)\?'':' Graner = PDF Katie Graner/);
+});

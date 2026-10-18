@@ -44,7 +44,7 @@ Ambito: solo CTFL-AT, syllabus v1.0 (2014), non CTAL-AT 2.0. Dati in `src/agile-
   - copertura minima per ogni obiettivo;
   - validazione del backup con una simulazione Agile in corso;
   - scheda del revisore aggiornata.
-- `npm run check:agile-sample <pdf>` gira solo in locale, perché il sample non entra nel repo:
+- `npm run check:sample -- --track agile <pdf>` gira solo in locale, perché il sample non entra nel repo:
   - confronta numeri e sigle, perché il confronto fra parole non funziona fra italiano e inglese;
   - sul sample v1.3 segnala una sola coppia, ag093 ↔ #37 (numeri 10 e 11);
   - confrontata a mano: domande diverse (scegliere una tecnica contro calcolare i valori limite su un altro intervallo).

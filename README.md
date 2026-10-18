@@ -57,9 +57,15 @@ scripts/icons.js   Icone PNG generate senza dipendenze
 scripts/serve.js   Anteprima locale (desktop o web)
 tests/core.test.js Test delle regole che influenzano risultati e dati
 tests/web.test.js  Test del build web e del livello PWA
+src/foundation-plan.js  CTFL 4.0.1: 64 obiettivi, quote d'esame v1.19 e domande originali per lotto (q081–q192)
+src/content-en-foundation.js  Inglese delle domande Foundation nuove
+scripts/review-foundation.js  Genera REVISIONE-FOUNDATION.md (npm run review:foundation)
+scripts/check-sample.js  Controllo locale di somiglianza con i sample ufficiali (npm run check:sample -- --track foundation|agile <pdf...>)
+scripts/check-terms.js  Elenca i termini ISTQB non allineati fra italiano e inglese (npm run check:terms)
+scripts/add-foundation-lot.js  Aggiunge un lotto di domande Foundation (italiano + inglese)
+tests/foundation.test.js  Test di quote, copertura e livelli K Foundation
 src/agile-2014.js  CTFL-AT 2014: obiettivi, quote d'esame ufficiali, mappatura e domande originali per lotto
 scripts/review-agile.js  Genera REVISIONE-AGILE.md (npm run review:agile)
-scripts/check-agile-sample.js  Controllo locale di somiglianza col sample ufficiale (npm run check:agile-sample <pdf>)
 tests/i18n.test.js Test di dizionari, traduzioni, terminologia e rendering nelle due lingue
 scripts/review-sheet.js  Genera REVISIONE-EN.md per il revisore (npm run review:en)
 ```
