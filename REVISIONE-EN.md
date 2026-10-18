@@ -1,6 +1,6 @@
 # Revisione della traduzione inglese (beta)
 
-Generato da `npm run review:en`. 264 domande tradotte su 264 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
+Generato da `npm run review:en`. 282 domande tradotte su 282 (tutte le CTFL, q001–q080), più titoli dei capitoli e glossario. Le 10 domande del pilota 1.4 sono marcate «pilota»: conviene partire da quelle.
 
 ## Per chi rivede
 
@@ -4052,6 +4052,276 @@ Note:
 | C | Accettare più sforzo iniziale per risparmiarne dopo | Accepting more effort early to save effort later |
 | D | Coinvolgere gli stakeholder perché sostengano l’approccio | Getting stakeholders to support the approach |
 | Spiegazione | Il syllabus precisa che anticipare il testing non significa trascurare quello successivo. | The syllabus states that testing earlier does not mean neglecting later testing. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q125 · FL-3.1.1 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale di questi prodotti di lavoro può essere esaminato con il testing statico? | Which of these work products can be examined by static testing? |
+| A | Solo il codice eseguibile in produzione | Only executable code in production |
+| B | Solo l’interfaccia grafica in esecuzione | Only the running graphical interface |
+| C | Nessuno: il testing statico richiede l’esecuzione | None: static testing requires execution |
+| D ✔ | Una test charter | A test charter |
+| Spiegazione | Qualsiasi prodotto di lavoro leggibile e comprensibile, comprese test charter, casi di test e backlog item, può essere esaminato staticamente. | Any work product that can be read and understood, including test charters, test cases and backlog items, can be examined statically. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q126 · FL-3.1.1 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale prodotto di lavoro è poco adatto al testing statico? | Which work product is not appropriate for static testing? |
+| A | Un modello dell’architettura | An architecture model |
+| B | Un elemento del product backlog | A product backlog item |
+| C ✔ | Codice eseguibile di terze parti che non va analizzato per motivi legali | Third-party executable code that must not be analysed for legal reasons |
+| D | Un contratto con il cliente | A contract with the customer |
+| Spiegazione | Il syllabus esclude i prodotti difficili da interpretare per le persone e che non vanno analizzati con strumenti, come codice di terzi per vincoli legali. | The syllabus excludes work products that are hard for people to interpret and should not be analysed by tools, such as third-party code under legal constraints. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q127 · FL-3.2.1 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale beneficio porta un feedback precoce e frequente degli stakeholder? | Which benefit does early and frequent stakeholder feedback bring? |
+| A | Sostituisce il testing dinamico | It replaces dynamic testing |
+| B ✔ | Permette di comunicare presto possibili problemi di qualità e di evitare fraintendimenti sui requisiti | It allows early communication of potential quality problems and avoids misunderstandings about requirements |
+| C | Garantisce che i requisiti non cambino più | It guarantees that requirements will never change again |
+| D | Rende inutili le review | It makes reviews unnecessary |
+| Spiegazione | Il feedback frequente fa emergere presto incomprensioni e problemi, quando correggerli costa meno. | Frequent feedback brings misunderstandings and problems to light early, when fixing them costs less. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q128 · FL-3.2.1 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa può succedere se gli stakeholder non danno feedback durante lo sviluppo? | What can happen if stakeholders give no feedback during development? |
+| A ✔ | Il prodotto può non corrispondere alla loro visione, con rilavorazioni costose e scadenze mancate | The product may not match their vision, with costly rework and missed deadlines |
+| B | Il prodotto risulta sempre conforme alle aspettative | The product always meets expectations |
+| C | I difetti diminuiscono automaticamente | Defects automatically decrease |
+| D | I test di accettazione diventano superflui | Acceptance testing becomes unnecessary |
+| Spiegazione | Il syllabus cita prodotti lontani dalla visione degli stakeholder, rilavorazioni, ritardi e perfino il fallimento del progetto. | The syllabus mentions products that miss the stakeholders’ vision, rework, delays and even project failure. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q129 · FL-3.2.3 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale ruolo raccoglie le anomalie e registra le informazioni della review, come le decisioni? | Which role collates anomalies and records review information, such as decisions? |
+| A | Il moderatore | The moderator |
+| B | L’autore | The author |
+| C | Il manager | The manager |
+| D ✔ | Lo scriba (recorder) | The scribe (recorder) |
+| Spiegazione | Lo scriba raccoglie le anomalie dei revisori e registra informazioni e decisioni. | The scribe collates the reviewers’ anomalies and records information and decisions. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q130 · FL-3.2.3 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale ruolo ha la responsabilità complessiva della review e decide chi coinvolgere, quando e dove? | Which role takes overall responsibility for the review and decides who is involved, when and where? |
+| A | Lo scriba | The scribe |
+| B | L’autore | The author |
+| C ✔ | Il review leader | The review leader |
+| D | Il revisore | The reviewer |
+| Spiegazione | Il review leader organizza la review e ne ha la responsabilità complessiva. | The review leader organises the review and holds overall responsibility for it. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q131 · FL-3.2.5 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale fattore contribuisce al successo di una review? | Which factor contributes to a successful review? |
+| A | Ridurre al minimo il tempo di preparazione | Keeping preparation time to a minimum |
+| B ✔ | Obiettivi chiari e criteri di uscita misurabili | Clear objectives and measurable exit criteria |
+| C | Usare la review per valutare le prestazioni dei partecipanti | Using the review to evaluate participants’ performance |
+| D | Rivedere in una sola volta il documento intero, anche se molto lungo | Reviewing a very long document in one go |
+| Spiegazione | Obiettivi chiari e criteri di uscita misurabili sono fra i fattori di successo citati. | Clear objectives and measurable exit criteria are among the success factors cited. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q132 · FL-3.2.5 · K1 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale altro fattore favorisce review efficaci? | Which other factor supports effective reviews? |
+| A ✔ | Il supporto del management e una formazione adeguata dei partecipanti | Management support and adequate training for participants |
+| B | L’assenza di feedback agli autori | Giving no feedback to authors |
+| C | Scegliere sempre l’ispezione, qualunque sia il contesto | Always choosing an inspection, whatever the context |
+| D | Tenere segreti i risultati della review | Keeping the review results secret |
+| Spiegazione | Il syllabus cita supporto del management, formazione e reviews come parte della cultura dell’organizzazione. | The syllabus mentions management support, training and making reviews part of the organisation’s culture. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q133 · FL-3.1.2 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Perché il testing statico ha valore anche quando seguirà il testing dinamico? | Why does static testing add value even when dynamic testing will follow? |
+| A | Perché garantisce l’assenza di malfunzionamenti in esecuzione | Because it guarantees there will be no failures at run time |
+| B | Perché misura le prestazioni del sistema | Because it measures system performance |
+| C | Perché sostituisce il test di accettazione | Because it replaces acceptance testing |
+| D ✔ | Può trovare difetti che il testing dinamico non trova, come codice irraggiungibile o difetti in prodotti non eseguibili | It can find defects that dynamic testing cannot, such as unreachable code or defects in non-executable work products |
+| Spiegazione | Il testing statico trova presto difetti diversi, anche in prodotti che non si possono eseguire. | Static testing finds different defects early, including in work products that cannot be executed. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q134 · FL-3.1.2 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale vantaggio del testing statico riguarda i costi? | Which advantage of static testing concerns costs? |
+| A | Elimina i costi di manutenzione | It removes maintenance costs |
+| B | Rende gratuiti gli strumenti di analisi | It makes analysis tools free |
+| C ✔ | I difetti trovati presto sono di solito meno costosi da correggere | Defects found early are usually cheaper to fix |
+| D | Il testing statico non richiede tempo | Static testing takes no time |
+| Spiegazione | Trovare i difetti presto evita che si propaghino nei prodotti successivi e riduce i costi. | Finding defects early stops them spreading into later work products and reduces costs. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q135 · FL-3.1.3 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale differenza fra testing statico e dinamico è corretta? | Which difference between static testing and dynamic testing is correct? |
+| A | Non c’è differenza negli obiettivi | There is no difference in objectives |
+| B ✔ | Il testing statico trova direttamente i difetti; il testing dinamico provoca malfunzionamenti da cui si risale ai difetti | Static testing finds defects directly; dynamic testing causes failures from which defects are traced |
+| C | Il testing statico richiede l’esecuzione del software | Static testing requires executing the software |
+| D | Il testing dinamico si applica a prodotti non eseguibili | Dynamic testing applies to non-executable work products |
+| Spiegazione | È la distinzione principale descritta dal syllabus. | This is the main distinction described in the syllabus. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q136 · FL-3.1.3 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale caratteristica di qualità si misura soprattutto con il testing dinamico? | Which quality characteristic is mainly measured with dynamic testing? |
+| A ✔ | L’efficienza prestazionale | Performance efficiency |
+| B | La manutenibilità del codice | Maintainability of the code |
+| C | La coerenza fra requisiti | Consistency between requirements |
+| D | La conformità del codice agli standard | Compliance of the code with standards |
+| Spiegazione | Le prestazioni dipendono dall’esecuzione del codice. | Performance depends on executing the code. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q137 · FL-3.2.2 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | In quale attività del processo di review si definiscono scopo, prodotto da rivedere, caratteristiche di qualità e criteri di uscita? | In which review activity are the purpose, the work product to review, the quality characteristics and the exit criteria defined? |
+| A | Review individuale | Individual review |
+| B | Comunicazione e analisi | Communication and analysis |
+| C | Correzione e reporting | Fixing and reporting |
+| D ✔ | Pianificazione | Planning |
+| Spiegazione | La pianificazione definisce l’ambito della review, i criteri di uscita, lo sforzo e i tempi. | Planning defines the scope of the review, exit criteria, effort and timeframes. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q138 · FL-3.2.2 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Che cosa avviene nella fase di comunicazione e analisi della review? | What happens in the communication and analysis activity of a review? |
+| A | Si distribuiscono i materiali ai partecipanti | The materials are handed out to participants |
+| B | Si chiude la review senza discussione | The review is closed without discussion |
+| C ✔ | Le anomalie trovate vengono analizzate e si decidono stato, responsabilità e azioni | The anomalies found are analysed and their status, ownership and actions are decided |
+| D | Si stabiliscono i criteri di uscita | The exit criteria are set |
+| Spiegazione | Le anomalie non sono automaticamente difetti: vanno analizzate e decise, spesso in una riunione. | Anomalies are not automatically defects: they must be analysed and decided, often in a meeting. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q139 · FL-3.2.4 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale tipo di review è guidato dall’autore e può avere fra gli obiettivi anche formare i revisori? | Which type of review is led by the author and may also aim to educate the reviewers? |
+| A | Review informale | Informal review |
+| B ✔ | Walkthrough | Walkthrough |
+| C | Ispezione | Inspection |
+| D | Review tecnica | Technical review |
+| Spiegazione | Il walkthrough, guidato dall’autore, può servire a formare, creare consenso, generare idee e trovare anomalie. | A walkthrough, led by the author, can serve to educate, build consensus, generate ideas and detect anomalies. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q140 · FL-3.2.4 · K2 · Static Testing
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale affermazione sulla review tecnica è corretta? | Which statement about a technical review is correct? |
+| A ✔ | È svolta da revisori tecnicamente qualificati e guidata da un moderatore, per creare consenso e prendere decisioni tecniche | It is performed by technically qualified reviewers and led by a moderator, to gain consensus and make technical decisions |
+| B | È sempre guidata dall’autore | It is always led by the author |
+| C | Non ha alcun obiettivo oltre alla formazione | Its only objective is education |
+| D | È il tipo di review più formale | It is the most formal type of review |
+| Spiegazione | Consenso e decisioni su problemi tecnici sono gli obiettivi tipici della review tecnica. | Consensus and decisions on technical problems are the typical objectives of a technical review. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q141 · FL-6.1.1 · K2 · Test Tools
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale categoria di strumenti supporta lo sviluppo di dati di test e la progettazione dei test? | Which category of tools supports the creation of test data and the design of tests? |
+| A | Strumenti di analisi statica | Static analysis tools |
+| B | Strumenti di gestione dei difetti | Defect management tools |
+| C | Strumenti di collaborazione | Collaboration tools |
+| D ✔ | Strumenti di progettazione e implementazione dei test | Test design and test implementation tools |
+| Spiegazione | Questi strumenti aiutano a generare casi di test, dati di test e procedure. | These tools help generate test cases, test data and test procedures. |
+
+- [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
+
+Note:
+
+### q142 · FL-6.2.1 · K1 · Test Tools
+
+| | Italiano | English |
+|---|---|---|
+| Domanda | Quale è un rischio dell’automazione dei test? | Which is a risk of test automation? |
+| A | Avere valutazioni più oggettive, per esempio della copertura | More objective assessment, for example of coverage |
+| B | Prevenire semplici errori umani grazie alla ripetibilità | Preventing simple human errors through repeatability |
+| C ✔ | Affidarsi troppo allo strumento, trascurando il pensiero critico | Relying too much on the tool and neglecting critical thinking |
+| D | Ridurre i tempi di esecuzione dei test | Reducing test execution times |
+| Spiegazione | Il syllabus cita la dipendenza eccessiva dallo strumento fra i rischi. | The syllabus lists over-reliance on the tool among the risks. |
 
 - [ ] Terminologia  - [ ] Significato  - [ ] Una sola risposta  - [ ] Stile
 
